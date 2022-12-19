@@ -1,0 +1,59 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13 00000000 2B34326138345835            S1 db '+','4','2','a','8','4','X','5' ; definim sirul S1
+    14                                      l equ $-S1 ; determinam lungimea sirului S1
+    15 00000008 613435                      S2 db 'a','4','5'
+    16                                      r equ $-S2 ; determinam lungimea sirului S2
+    17 0000000B 00<rept>                    D times 20 db 0 ;D: '+', '2', '8', 'X'
+    18 0000001F <res 00000001>              ap resb 1
+    19 00000020 <res 00000001>              cont resb 1
+    20                                  
+    21                                  ; our code starts here
+    22                                  segment code use32 class=code
+    23                                      start:
+    24 00000000 B908000000                      mov ECX, l  ; punem in registrul contor dimensiunea primului sir
+    25 00000005 BE00000000                      mov ESI, 0  ; indicele de la care incepem iterarea
+    26 0000000A BF00000000                      mov EDI, 0  ; indicele din sirul destinatie (D)
+    27 0000000F E34C                            jecxz sf    ; tratam cazul in care ECX e 0
+    28                                          loop_start:
+    29                                          
+    30 00000011 8A86[00000000]                      mov AL,[S1+ESI]     ;punem in AL elementul curent 0
+    31 00000017 C605[1F000000]00                    mov byte[ap],0      ;initializam [ap] cu 0, intrucat ea va contoriza numarul de aparitii a lui AL in S2
+    32 0000001E C605[20000000]03                    mov byte[cont],r    ;ne luam o variabila contor, intrucat ECX este ocupat, cu ea implementand o varianta proprie de loop 
+    33 00000025 BB00000000                          mov EBX,0           ;intializam EBX, pentru al folosi pe post de contor in noul sir 
+    34                                              strt:
+    35                                                  
+    36 0000002A 8A93[08000000]                          mov DL,[S2+EBX] ;punem in DL elemntul curent
+    37                                                  
+    38 00000030 38D0                                    cmp AL,DL       ; verificam egalitatea cu DL
+    39 00000032 7506                                    jne et
+    40 00000034 FE05[1F000000]                          inc byte[ap]    ; daca cele doua sunt egale, incrementam variabila ce retine numarul de aparitii
+    41                                                  et:
+    42                                                  
+    43 0000003A 43                                      inc EBX         ;incrementam variabila contor pentru sirul S2
+    44 0000003B FE0D[20000000]                          dec byte[cont]  ;decrementam contorul loop-ului
+    45 00000041 803D[20000000]00                        cmp byte[cont],0;comparam contorul loop-ului cu 0 pentru a vedea daca mai avem de executat pasi
+    46 00000048 75E0                                jne strt
+    47                                              
+    48 0000004A 803D[1F000000]00                    cmp byte[ap],0      ;comparam numarul de aparitii cu 0 pentru a vedea daca exista caracterul cautat in S2
+    49 00000051 7507                                jne eth
+    50 00000053 8887[0B000000]                      mov [D+EDI],AL      ;in cazul in care nu exista punem caracterul in noul sir, cel destinatie, adica D
+    51 00000059 47                                  inc EDI             ;incrementam registrul index pentru sirul D
+    52                                              eth:
+    53 0000005A 46                                  inc ESI             ;incrementam registrul index pentru sirul S1
+    54                                              
+    55 0000005B E2B4                            loop loop_start
+    56                                          sf:
+    57                                          
+    58 0000005D 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    59 0000005F FF15[00000000]                  call    [exit]       ; call exit to terminate the program

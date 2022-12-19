@@ -1,0 +1,80 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit,fopen,fprintf,fclose   ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                  import fopen msvcrt.dll   ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import fprintf msvcrt.dll
+    11                                  import fclose msvcrt.dll
+    12                                  
+    13                                  ; our data is declared here (the variables needed by our program)
+    14                                  segment data use32 class=data
+    15 00000000 6F75747075742E7478-         nume_fisier db "output.txt",0
+    15 00000009 7400               
+    16 0000000B 7700                        acces_mode db "w",0
+    17 0000000D 00                          dif db 0
+    18 0000000E FFFFFFFF                    description_fis dd -1
+    19                                      
+    20 00000012 546174612061726520-         text db "Tata are 5/*-2 feciori",0
+    20 0000001B 352F2A2D3220666563-
+    20 00000024 696F726900         
+    21                                      l equ $-text-1
+    22 00000029 00<rept>                    nw_text times l+1 db 0
+    23                                  
+    24                                  ; our code starts here
+    25                                  segment code use32 class=code
+    26                                      start:
+    27                                          ;pentru modificarea textului vom folosi operatii pe siruri
+    28 00000000 FC                              cld ;parcurgem in de la stanga la dreapta
+    29 00000001 BE[12000000]                    mov ESI,text ;in SOURCE INDEX punem adresa textului initial
+    30 00000006 BF[29000000]                    mov EDI,nw_text ; in DESTINATION INDEX punem adresa textului de construit
+    31 0000000B B916000000                      mov ECX,l ;pune in ECX lungimea sirului 
+    32 00000010 C605[0D000000]E0                mov byte[dif],'A'-'a';
+    33                                          st_loop:
+    34 00000017 AC                                  lodsb ;luam in AL caracterul din text
+    35                                              ;verificam if('a'<=c && c<='z')
+    36 00000018 3C7A                                cmp AL,'z'
+    37 0000001A 770A                                ja et1
+    38 0000001C 3C61                                cmp AL,'a'
+    39 0000001E 7206                                jb et2
+    40 00000020 0205[0D000000]                          add AL,[dif] ;in caz afirmativ adaugam cont
+    41                                              et1:
+    42                                              et2:
+    43 00000026 AA                                  stosb ;pune in sirul destinatie pe AL
+    44 00000027 E2EE                            loop st_loop
+    45                                          
+    46 00000029 B000                            mov AL,0 ; adaugam 0-ul final pentru a putea afisa in fisier
+    47 0000002B AA                              stosb
+    48                                          
+    49                                          ;apelam fopen pentru a deschide fisierul
+    50                                          ;EAX=fopen(nume_fisier,acces_mode)
+    51 0000002C 68[0B000000]                    push dword acces_mode
+    52 00000031 68[00000000]                    push dword nume_fisier
+    53 00000036 FF15[00000000]                  call [fopen]
+    54 0000003C 83C408                          add ESP,4*2
+    55                                          
+    56 0000003F A3[0E000000]                    mov [description_fis],EAX ;salvam valoare returnata in EAX in description_fis
+    57                                          
+    58 00000044 83F800                          cmp EAX,0
+    59 00000047 7423                            je final
+    60                                          
+    61                                              ;scriem testul in fisier
+    62                                              ;fprintf(description_fis,nw_text)
+    63 00000049 68[29000000]                        push dword nw_text
+    64 0000004E FF35[0E000000]                      push dword [description_fis]
+    65 00000054 FF15[00000000]                      call [fprintf]
+    66 0000005A 83C408                              add ESP,4*2
+    67                                              
+    68                                              ;inchidem fisierul 
+    69                                              ;fclose(description_fis)
+    70 0000005D FF35[0E000000]                      push dword [description_fis]
+    71 00000063 FF15[00000000]                      call [fclose]
+    72 00000069 83C404                              add ESP,4
+    73                                          
+    74                                          final:
+    75                                          
+    76 0000006C 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    77 0000006E FF15[00000000]                  call    [exit]       ; call exit to terminate the program

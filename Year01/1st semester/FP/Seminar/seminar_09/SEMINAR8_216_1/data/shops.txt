@@ -1,0 +1,5 @@
+1;Bon Bon Candy;Piata Muzeului
+2;CandyToys;Bucuresti
+3;Candyland;Strada Fericirii
+4;Sweets Store;Sibiu
+5;Candy Store;New York

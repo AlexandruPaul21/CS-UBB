@@ -1,0 +1,9 @@
+9,frontend,app crashes randomly,6
+13,backend,database exceeds memory quota,9
+4,backend,server crashes on duplicate id,8
+1,server,app does not respond,10
+7,ui,does not show the menu,15
+3,service,does not connect with repo,3
+5,appCord,crashes randomly,10
+14,frontend,does not respond,9
+14,server,does not create entities,1

@@ -1,0 +1,60 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                          ;FEDCBA9876543210
+    14 00000000 EDA6                        a dw 1010011011101101b ;=A6ED
+    15 00000002 <res 00000004>              b resw 2
+    16                                  
+    17                                  ;0-3 = 0
+    18                                  ;4-7 = 8-11 a 
+    19                                  ;8-9,10-11 = 0-1 a inversati
+    20                                  ;12-15 = 1
+    21                                  ;[b]=1111 1010 0110 0000 1111 1010 0110 0000=FA60FA60h
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ;0-3 = 0
+    26                                          ;initializam EAX(unde vom stoca si vom lucra cu variabila [b]) astfel indeplinind conditia ca primii 4 biti sa fie 0 EAX=00000000h
+    27 00000000 B800000000                      mov EAX,0
+    28                                          
+    29                                          ;4-7 = 8-11 a
+    30 00000005 BB00000000                      mov EBX,0 ;initializam EBX cu 0 pentru a facilita interactiunea cu EAX
+    31 0000000A 668B1D[00000000]                mov BX,[a] ; folosim BX ca o copie pentru [a] BX=[a]
+    32 00000011 6681E3000F                      and BX,0000111100000000b ; izolam biti 8-11 BX=0000 0110 0000 0000b=0600h
+    33 00000016 66C1EB04                        shr BX,4 ;rotim la dreapta cu 4 pozitii astfel incat sa aliniem continutul bitilor
+    34 0000001A 09D8                            or EAX,EBX
+    35                                         
+    36                                          ;8-9,10-11 = 0-1 a , inversati
+    37 0000001C BB00000000                      mov EBX,0 ;initializam EBX cu 0 pentru a facilita interactiunea cu EAX
+    38 00000021 668B1D[00000000]                mov BX,[a] ; folosim BX ca o copie pentru [a] BX=[a]
+    39 00000028 66F7DB                          neg BX ; negam toti biti din BX
+    40 0000002B 6683EB01                        sub BX,1 ; neg ne returneaza complementul fata de 2, noi avem de nevoie de cel fata de 1
+    41 0000002F 6683E303                        and BX,0000000000000011b ; izolam biti 0-1 BX=0000000000000010b=0002h astfel avem pe pozitie ultimii 2 biti, inversati
+    42 00000033 66C1E308                        shl BX,8 ;shiftam la stanga cu 8 pozitii, astfel aliniind biti cu 8-9
+    43 00000037 09D8                            or EAX,EBX ; punem bitii pe pozitia 8-9    EAX=0000 0000 0000 0000 0000 0010 0110 0000b = 00000260h
+    44 00000039 66C1E302                        shl BX,2 ;shiftam la stanga cu inca 2 pozitii astfel sunt aliniati cu pozitiile 10-11
+    45 0000003D 09D8                            or EAX,EBX ; punem bitii pe pozitia 10-11  EAX=0000 0000 0000 0000 0000 1010 0110 0000b = 00000A60h
+    46                                         
+    47                                          ;12-15 = 1
+    48 0000003F BB00000000                      mov EBX,0 ;initializam EBX cu 0 pentru a facilita interactiunea cu EAX
+    49 00000044 66BB00F0                        mov BX,1111000000000000b ; modificam ultimii 4 biti ai registrului BX facand-ui 1
+    50 00000048 09D8                            or EAX,EBX ; astfel bitii 12-15 din registrul EAX vor fi facuti 1, ceilalti nefiind afectati EAX=1111 1010 0110 0000b=FA60h
+    51                                          
+    52                                          ;16-31 = 0-15 tot ai lui B 
+    53 0000004A 89C3                            mov EBX,EAX ;punem in EBX, valoarea lui EAX
+    54 0000004C C1E310                          shl EBX,16  ;shiftam la stanga cu 16 pozitii aliniind astfel bitii ce trebuie modificati EBX=1111 1010 0110 0000 0000 0000 0000 0000b=FA600000h
+    55 0000004F 09D8                            or EAX,EBX  ;punem bitii din EBX(cel obtinut prin shiftarea celor din EAX ) astfel bitii 16-31 vor fi egali 0-15
+    56 00000051 A3[02000000]                    mov [b],EAX ;[b]=1111 1010 0110 0000 1111 1010 0110 0000=FA60FA60h
+    57                                         
+    58                                          
+    59 00000056 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    60 00000058 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

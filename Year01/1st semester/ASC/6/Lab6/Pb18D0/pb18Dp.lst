@@ -1,0 +1,99 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13 00000000 7856AB12CDAB561244-         sir DD 12AB5678h, 1256ABCDh, 12344344h ;definim sirul din problema
+    13 00000009 433412             
+    14                                      l equ ($-sir)/4 ;lungimea sirului sir
+    15 0000000C 0000<rept>                  sir_high times l dw 0 ; acest sir va contine partea high a dw din sir
+    16 00000012 0000<rept>                  sir_low times l dw 0 ;  acest sir va contine partea low a dw din sir
+    17 00000018 00000000<rept>              rez times l dd 0    
+    18 00000024 00                          cont db 0
+    19                                  
+    20                                  ; our code starts here
+    21                                  segment code use32 class=code
+    22                                      start:
+    23 00000000 FC                              cld ;sirul va fi parcurs de la stanga la dreapta 
+    24 00000001 B903000000                      mov ECX,l ; punem in registrul contor, lungimea sirului 
+    25 00000006 BE[00000000]                    mov ESI,sir ;punem in ESI adresa de inceput a sirului
+    26 0000000B BA00000000                      mov EDX,0   ;EDX va fi registru index pentru sir_high si sir_low
+    27 00000010 E31F                            jecxz sfarsit
+    28                                          
+    29                                          st_loop:
+    30 00000012 AD                                  lodsd  ;aduncem in EAX valoarea de la [sir:ESI]
+    31 00000013 6689C3                              mov BX,AX ;aducem in BX partea low a dublucuvantului 
+    32                                             
+    33 00000016 250000FFFF                          and EAX,0FFFF0000h ;izolam cuvantul high din EAX
+    34 0000001B C1E810                              shr EAX,16 ;aducem dublucuvantul high in locul dublucuvantului low
+    35                                              ;acum avem BX si in AX cele doua componente ale numarului cu care vom opera mai departe
+    36                                              
+    37 0000001E 668982[0C000000]                    mov [sir_high+EDX],AX  ;punem partea high, stocata in AX in sir_high
+    38 00000025 66899A[12000000]                    mov [sir_low+EDX] ,BX  ;punem partea low, stocata in BX in sir_low
+    39 0000002C 83C202                              add EDX,2              ;incrementam cu 2 indexul sirurilor deoarece lucram cu word-uri
+    40                                              
+    41 0000002F E2E1                            loop st_loop
+    42                                          sfarsit:
+    43                                          ;vom proiecta un algoritm de sortare pentru sir_high
+    44 00000031 B903000000                      mov ECX,l ;punem in registrul contor, lungimea sirului
+    45 00000036 BE00000000                      mov ESI,0 ;punem in ESI 0, pentru a parcurge sirul cu el
+    46                                          
+    47                                          bg_loop:
+    48                                          
+    49 0000003B BF00000000                          mov EDI,0          ;initializam EDI cu 0, folosindul ca index pentru a realiza sortare
+    50 00000040 880D[24000000]                      mov byte[cont],CL  ; folosim cont pe post de variabila contor, punem in ea nr ramas de pasi 
+    51 00000046 FE0D[24000000]                      dec byte[cont]     ; decrementam cu o unitate aferenta cu inceperea de la j+1 a for-ului din sortarea prin selectie
+    52                                              
+    53                                              stra:
+    54 0000004C 83C702                              add EDI,2          ;il aducem prin aceasta structura pe EDI la valoarea lui ESI
+    55 0000004F 39F7                                cmp EDI,ESI
+    56 00000051 76F9                                jbe stra
+    57                                              
+    58                                              slp:
+    59                                              
+    60 00000053 668B86[0C000000]                        mov AX,[sir_high+ESI]       ;preluam in AX elementul din sirul high (elementul de pe pozitia i)
+    61 0000005A 663B87[0C000000]                        cmp AX,word[sir_high+EDI]   ;comparam cu elementul de pe pozitia j 
+    62                                              
+    63 00000061 7215                                    jb mic
+    64                                              
+    65 00000063 668B9F[0C000000]                        mov BX,[sir_high+EDI]       ;in cazul in care am gasit doua elemente ce trebuie interschimbate 
+    66 0000006A 66899E[0C000000]                        mov [sir_high+ESI],BX       ;realizam swap-ul lor folosindu-ne de registrii AX,BX
+    67 00000071 668987[0C000000]                        mov [sir_high+EDI],AX
+    68                                              
+    69                                                  mic:
+    70                                              
+    71 00000078 83C702                                  add EDI,2                   ;din moment ce am ales sa parcugem manual sirul, va trebui sa incrementam EDI cu 
+    72 0000007B FE0D[24000000]                          dec byte[cont]              ;decrementam contorul 
+    73 00000081 803D[24000000]00                        cmp byte[cont],0            ;implementam conditia de oprire a loop-ului
+    74 00000088 7DC9                                jge slp
+    75 0000008A 83C602                              add ESI,2                       ;incrementam manual si valoarea lui ESI
+    76 0000008D E2AC                            loop bg_loop
+    77                                          
+    78                                          ;reconstituim sirul 
+    79 0000008F BF[18000000]                    mov EDI,rez ; punem in EDI, adresa rezultatului, astfel incat sa il construim automat
+    80 00000094 B903000000                      mov ECX,l  ;punem in ECX lungimea sirului, pentru a realiza loop ul
+    81 00000099 BE00000000                      mov ESI,0  ;punem in ESI,0 deoarece vom parcuge manual acest sir
+    82                                          
+    83                                          lp_st:
+    84                                          
+    85 0000009E B800000000                          mov EAX,0
+    86 000000A3 668B86[0C000000]                    mov AX,[sir_high+ESI]  ;aducem in AX(word ul low al EAX) partea high a sirului 
+    87                                              
+    88 000000AA C1E010                              shl EAX,16             ;shiftam spre stanga cu 16 pozitii in asa fel incat ducem partea high pe pozitie
+    89 000000AD 668B86[12000000]                    mov AX,[sir_low+ESI]   ;adaugam partea low 
+    90                                              
+    91 000000B4 AB                                  stosd                  ;stocam partea low in [rez:EDI]
+    92                                              
+    93 000000B5 83C602                              add ESI,2              ;incrementam manual indexul
+    94                                  
+    95 000000B8 E2E4                            loop lp_st
+    96                                          
+    97 000000BA 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    98 000000BC FF15[00000000]                  call    [exit]       ; call exit to terminate the program

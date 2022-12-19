@@ -1,0 +1,27 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13 00000000 2B34326138345835            S1 db '+', '4', '2', 'a', '8', '4', 'X', '5' ; definim sirul S1
+    14 00000008 613435                      S2 db 'a', '4', '5'
+    15                                      l equ $-S1
+    16                                      r equ $-S2
+    17 0000000B 00<rept>                    D times 20 db 0
+    18                                  
+    19                                  ; our code starts here
+    20                                  segment code use32 class=code
+    21                                      start:
+    22 00000000 B90B000000                      mov ECX,l
+    23                                          
+    24                                          
+    25                                          
+    26 00000005 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    27 00000007 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

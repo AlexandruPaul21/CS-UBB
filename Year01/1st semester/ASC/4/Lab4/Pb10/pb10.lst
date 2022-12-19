@@ -1,0 +1,30 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                          ;FEDCBA9876543210
+    14 00000000 7379                        a dw 0111100101110011b ;1001- biti 8-11
+    15 00000002 7F                          b db 01111111b ;=7Fh
+    16                                  ; [b]=0111 1001=79h
+    17                                  ; our code starts here
+    18                                  segment code use32 class=code
+    19                                      start:
+    20 00000000 A0[02000000]                    mov AL,[b];AL=[b]
+    21 00000005 24F0                            and AL,11110000b ;zerorizam ultimii 4 biti ai lui b, ceilalti raman neschimbati AL=0111 0000b =70h
+    22                                          
+    23 00000007 66C12D[00000000]08              shr word[a],8        ;shiftam spre drepata cu 8 pozitii continutul lui a, astfel aliniem pozitiile ce trebuie schimbate [a]=0000 0000 0111 1001= 0079H
+    24 0000000F 8A1D[00000000]                  mov BL,byte[a]   ;selectam primul octet din a BL=[a]=0111 1001
+    25 00000015 80E30F                          and BL,00001111b ;zerorizam restul continutului astfel incat raman doar cu bitii pe care vrem sa ii modificam BL=0000 1001 =09h
+    26                                          
+    27 00000018 08D8                            or AL,BL         ;inlocuim bitii AL=0111 1001=79h 
+    28                                          
+    29 0000001A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    30 0000001C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

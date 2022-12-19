@@ -1,0 +1,5 @@
+Fantana;Anca Armarsu;Concert;400
+Lacul Lebedelor;Andrei Adrian;Comedie;300
+Lacul Lacurilor;Andrei Andreinovici;Comedie;500
+Casa din deal;Laura Harasniuc;Balet;300
+Lacuna;Liviu Antal;Altele;400

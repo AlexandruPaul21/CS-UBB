@@ -1,0 +1,49 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13 00000000 AEFB                        a dw 1111101110101110b
+    14 00000002 1DB7                        b dw 1011011100011101b
+    15 00000004 9177                        c dw 0111011110010001b
+    16 00000006 <res 00000001>              d resb 1
+    17 00000007 <res 00000001>              e resb 1
+    18 00000008 <res 00000001>              f resb 1
+    19                                  
+    20                                  ;D=01110b+11000b=100110b
+    21                                  ;E=11101b
+    22                                  ;F=D-E=11000b
+    23                                  ; our code starts here
+    24                                  segment code use32 class=code
+    25                                      start:
+    26                                          ;formam in AX nr format cu biti 0-4 din [a] apoi il adaugam la [d]
+    27 00000000 66A1[00000000]                  mov AX,[a]
+    28 00000006 6683E01F                        and AX,0000000000011111b ;izolam bitii 0-4 ai nr [a] AX=0000 0000 0000 1110b=000Dh
+    29 0000000A A2[06000000]                    mov [d],AL ;[d]=AX=01110b=0Eh
+    30                                          
+    31                                          ;formam in AX nr format cu biti 5-9 din [b] apoi il adaugam la [d]
+    32 0000000F 66A1[02000000]                  mov AX,[b] ;AX=[b]
+    33 00000015 6625E003                        and AX,0000001111100000b ;izolam biti 5-9 ai nr [b]   AX=00000001100000000b
+    34 00000019 66C1E805                        shr AX,5 ;shiftam spre dreapta astfel obtinand nr format din bitii 5-9 ai lui [b]
+    35 0000001D 0005[06000000]                  add [d],AL ;adaugam valoarealui AL in variabila [d] astfel obtinand valoarea dorita  [d]=01110+11000=100110b=26h
+    36                                          
+    37                                          ;formam in AX nr format cu biti 10-14 ai lui [c] acest nr reprezentand f-ul 
+    38 00000023 66A1[04000000]                  mov AX,[c] ; AX=[c]
+    39 00000029 6625007C                        and AX,0111110000000000b ;izolam biti 10-14 ai nr [c] AX=0111010000000000b
+    40 0000002D 66C1E80A                        shr AX,10;shiftam spre dreapta astfel obtinand nr format din bitii 10-14 ai lui [c]
+    41 00000031 A2[07000000]                    mov [e],AL ;obtinem in [e] valoarea dorita   [e]=11101b=1Dh
+    42                                          
+    43 00000036 A0[06000000]                    mov AL,[d] ;AL=[d]
+    44 0000003B 2A05[07000000]                  sub AL,[e] ;AL=[d]-[e]
+    45                                          
+    46 00000041 A2[08000000]                    mov [f],AL ; AL=[f]=[d]-[e]=11000b=18h
+    47                                          
+    48 00000046 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    49 00000048 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

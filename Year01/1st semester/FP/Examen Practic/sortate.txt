@@ -1,0 +1,6 @@
+Lacul mare;Adrian Mare;Concert;99999
+Fantana;Anca Armarsu;Concert;400
+Lacul Lebedelor;Andrei Adrian;Comedie;300
+Casa din deal;Laura Harasniuc;Balet;300
+Lacuna;Liviu Antal;Comedie;6969
+La masa dusmanilor;Nicolae Guta;Balet;6000
