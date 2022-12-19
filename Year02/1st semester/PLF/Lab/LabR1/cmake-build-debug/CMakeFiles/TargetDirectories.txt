@@ -1,0 +1,3 @@
+/Users/alexandrusirbu/Desktop/Facultate/PLF/LabR1/cmake-build-debug/CMakeFiles/LabR1.dir
+/Users/alexandrusirbu/Desktop/Facultate/PLF/LabR1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alexandrusirbu/Desktop/Facultate/PLF/LabR1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
