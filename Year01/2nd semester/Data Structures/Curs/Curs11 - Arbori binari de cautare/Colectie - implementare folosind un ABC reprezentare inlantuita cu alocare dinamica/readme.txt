@@ -1,0 +1,1 @@
+Colectia se reprezinta sub forma unui ABC (in care se memoreaza toate elementele din colectie) reprezentat inlantuit cu alocare dinamica.   

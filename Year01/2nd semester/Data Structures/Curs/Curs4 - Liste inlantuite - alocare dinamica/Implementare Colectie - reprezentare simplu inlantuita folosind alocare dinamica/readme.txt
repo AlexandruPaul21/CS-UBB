@@ -1,0 +1,1 @@
+Colectia se reprezinta sub forma unei liste inlantuite continand toate elementele din colectie  
