@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/alexandrusirbu/CS-UBB/Year02/1st semester/MAP/Laborator/Lab_facultativ/Lab_facultativ.csproj": {}
+  },
+  "projects": {
+    "/Users/alexandrusirbu/CS-UBB/Year02/1st semester/MAP/Laborator/Lab_facultativ/Lab_facultativ.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexandrusirbu/CS-UBB/Year02/1st semester/MAP/Laborator/Lab_facultativ/Lab_facultativ.csproj",
+        "projectName": "Lab_facultativ",
+        "projectPath": "/Users/alexandrusirbu/CS-UBB/Year02/1st semester/MAP/Laborator/Lab_facultativ/Lab_facultativ.csproj",
+        "packagesPath": "/Users/alexandrusirbu/.nuget/packages/",
+        "outputPath": "/Users/alexandrusirbu/CS-UBB/Year02/1st semester/MAP/Laborator/Lab_facultativ/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alexandrusirbu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
