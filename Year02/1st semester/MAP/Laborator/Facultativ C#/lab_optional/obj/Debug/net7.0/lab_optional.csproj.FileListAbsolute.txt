@@ -1,0 +1,17 @@
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/bin/Debug/net7.0/lab_optional
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/bin/Debug/net7.0/lab_optional.deps.json
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/bin/Debug/net7.0/lab_optional.runtimeconfig.json
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/bin/Debug/net7.0/lab_optional.dll
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/bin/Debug/net7.0/lab_optional.pdb
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/lab_optional.csproj.AssemblyReference.cache
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/lab_optional.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/lab_optional.AssemblyInfoInputs.cache
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/lab_optional.AssemblyInfo.cs
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/lab_optional.csproj.CoreCompileInputs.cache
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/lab_optional.csproj.CopyComplete
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/lab_optional.dll
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/refint/lab_optional.dll
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/lab_optional.pdb
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/lab_optional.genruntimeconfig.cache
+/Users/alexandrusirbu/RiderProjects/lab_optional/lab_optional/obj/Debug/net7.0/ref/lab_optional.dll

@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{0C6432A0-2E7F-48AA-8FF4-93F07D42E0DE}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.lab__optional PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="lab_optional/repository/EchipaFileRepository.cs">
+    <Files>
+      <File FileName="lab_optional/Program.cs" Line="1" Column="1" />
+      <File FileName="lab_optional/repository/EchipaFileRepository.cs" Line="20" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab_optional" expanded="True">
+            <Node name="lab_optional" expanded="True">
+              <Node name="repository" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
