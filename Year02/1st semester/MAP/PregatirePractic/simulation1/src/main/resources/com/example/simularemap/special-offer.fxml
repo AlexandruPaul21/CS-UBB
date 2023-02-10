@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simularemap.SpecialOfferController">
+   <children>
+      <VBox layoutX="178.0" layoutY="80.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="20.0" prefWidth="600.0">
+               <children>
+                  <Label text="Start date">
+                     <HBox.margin>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="datePickerBegin">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="5.0" top="2.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <Label text="End date">
+                     <HBox.margin>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="datePickerEnd">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <Button mnemonicParsing="false" onMouseClicked="#searchBtnHandle" text="Search">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="offersTableView" prefHeight="370.0" prefWidth="600.0">
+               <columns>
+                  <TableColumn fx:id="startDateCol" prefWidth="150.0" text="Start date" />
+                  <TableColumn fx:id="endDateCol" prefWidth="151.0" text="End date" />
+                  <TableColumn fx:id="percentsCol" prefWidth="132.0" text="Percents" />
+               </columns>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </TableView>
+            <Button mnemonicParsing="false" text="Reserve" onMouseClicked="#reserveButton">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

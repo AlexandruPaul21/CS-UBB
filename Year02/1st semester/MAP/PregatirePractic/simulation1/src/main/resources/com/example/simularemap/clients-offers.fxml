@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simularemap.ClientsOffer">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tableViewOffers" prefHeight="400.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="hoNameCol" prefWidth="170.0" text="Hotel name" />
+                <TableColumn fx:id="locNameCol" prefWidth="167.0" text="Location name" />
+                  <TableColumn fx:id="startCol" prefWidth="120.0" text="Start date" />
+                  <TableColumn fx:id="endCol" prefWidth="142.0" text="End date" />
+              </columns>
+            </TableView>
+            <Label text="Text" fx:id="testLabelObs">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simularemap.MainController">
+   <children>
+      <VBox layoutX="144.0" layoutY="74.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ComboBox fx:id="locationsComboBox" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <TableView fx:id="hotelsTableView" onMouseClicked="#tableClick" prefHeight="379.0" prefWidth="600.0">
+               <columns>
+                  <TableColumn fx:id="hotelNameColumn" prefWidth="138.0" text="Hotel name" />
+                  <TableColumn fx:id="roomsColumn" prefWidth="118.0" text="No. of rooms" />
+                  <TableColumn fx:id="priceColumn" prefWidth="179.0" text="Price Per Night" />
+                  <TableColumn fx:id="typeColumn" prefWidth="164.0" text="Type" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
