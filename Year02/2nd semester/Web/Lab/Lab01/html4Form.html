@@ -1,31 +1,39 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HTML 4 form</title>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8">
+    <title>Admitere liceu</title>
 </head>
 <body>
-    <div>
+    <div align="center">
         <form method="post" action="success.html">
             <table border="1">
                 <thead>
-                    <th colspan="6" width="80%">Detalii despre persoana</th>
+                    <tr>
+                        <th colspan="6" width="80%" bgcolor="green"><h1>Detalii despre elev</h1></th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="2"><strong>Nume</strong></td>
+                        <td colspan="2"><b>Nume</b></td>
+                        <td><input type="text" size="17" maxlength="10"></td>
+                        <td colspan="2"><strong>Data na&#351;terii</strong></td>
                         <td><input type="text"></td>
-                        <td colspan="2"><strong>Data nașterii</strong></td>
-                        <td><input type="date"></td>
                     </tr>
                     <tr>
-                        <td ><label for="address"><strong>Adresă</strong></label></td>
-                        <td colspan="5"><input id="address" type="text"></td>
+                        <td><label for="address"><strong>Adres&#259;</strong></label></td>
+                        <td><input id="address" name="address" type="text"></td>
+                        <td><label for="lastname_mom">Prenume mam&#259;</label></td>
+                        <td><input id="lastname_mom" type="text"></td>
+                        <td><label for="lastname_father">Prenume tat&#259;</label></td>
+                        <td><input id="lastname_father" type="text"></td>
                     </tr>
                     <tr>
-                        <td>Oraș</td>
+                        <td>Ora&#351;</td>
                         <td><input type="text"></td>
-                        <td>Județ</td>
+                        <td>Jude&#355;</td>
                         <td><select name="judete">
                             <option value="0">Alege Judet</option>
                             <option value="Alba">Alba</option>
@@ -69,11 +77,205 @@
                             <option value="Tulcea">Tulcea</option>
                             <option value="Vaslui">Vaslui</option>
                             <option value="Valcea">Valcea</option>
-                            <option value="Vrancea">Vrancea</option></td>
-                        <td>Cod poștal</td>
+                            <option value="Vrancea">Vrancea</option></select>
+                        </td>
+                        <td>Cod po&#351;tal</td>
                         <td><input type="text"></td>
                     </tr>
-                    <tr><
+                </tbody>
+            </table>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td><img src="narnia.jpg" width="200" height="100" alt="image cannot be displayed"></td>
+                        <td colspan="5" width="80%" bgcolor="aqua"><strong>Detalii despre optiunile <span><u>alese</u></span></strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2"><center>Op&#355;iuni liceu</center></td>
+                        <td colspan="4">
+                            <table border="2" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>Prioritate</th>
+                                    <th>Ora&#351;</th>
+                                    <th>Liceu</th>
+                                    <th>Specializare</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>
+                                            <select>
+                                                <option value="Zalau">Zalau</option>
+                                                <option value="Cluj">Cluj</option>
+                                                <option value="Oradea">Orade</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="Liceul nr.1">Liceul nr.1</option>
+                                                <option value="Liceul nr.2">Liceul nr.2</option>
+                                                <option value="Liceul nr.3">Liceul nr.3</option>
+                                                <option value="Liceul agricol">Liceul agricol</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="matematica-informatica">matematica-informatica</option>
+                                                <option value="matematica">matematica</option>
+                                                <option value="informatica">informatica</option>
+                                                <option value="mecanica">mecanica</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>
+                                            <select>
+                                                <option value="Zalau">Zalau</option>
+                                                <option value="Cluj">Cluj</option>
+                                                <option value="Oradea">Orade</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="Liceul nr.1">Liceul nr.1</option>
+                                                <option value="Liceul nr.2">Liceul nr.2</option>
+                                                <option value="Liceul nr.3">Liceul nr.3</option>
+                                                <option value="Liceul agricol">Liceul agricol</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="matematica-informatica">matematica-informatica</option>
+                                                <option value="matematica">matematica</option>
+                                                <option value="informatica">informatica</option>
+                                                <option value="mecanica">mecanica</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3.</td>
+                                        <td>
+                                            <select>
+                                                <option value="Zalau">Zalau</option>
+                                                <option value="Cluj">Cluj</option>
+                                                <option value="Oradea">Orade</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select multiple>
+                                                <option value="Liceul nr.1">Liceul nr.1</option>
+                                                <option value="Liceul nr.2" selected>Liceul nr.2</option>
+                                                <option value="Liceul nr.3">Liceul nr.3</option>
+                                                <option value="Liceul agricol">Liceul agricol</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="matematica-informatica">matematica-informatica</option>
+                                                <option value="matematica">matematica</option>
+                                                <option value="informatica">informatica</option>
+                                                <option value="mecanica">mecanica</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><center>Tipul liceului</center></td>
+                        <td colspan="4">
+                            <input checked type="radio" name="period" value="HTML">
+                            <label>La zi</label><br>
+                            <input type="radio" name="period" value="HTML">
+                            <label>Seral</label><br>
+                            <input type="radio" name="period" value="HTML">
+                            <label>Frecventa redusa</label><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="2"><center>Benefcii extra</center></td>
+                        <td colspan="4">
+                            <fieldset>
+                                <legend>Cerin&#355;ele extra pot fi taxate</legend>
+                                <input type="checkbox">
+                                <label>Cazare</label><br>
+                                <input type="checkbox">
+                                <label>Nevoi speciale date de handicap mental</label><br>
+                                <input type="checkbox">
+                                <label>Nevoi speciale date de handicap locomotor</label><br>
+                                <input type="checkbox">
+                                <label>Alergii la anumita&#774; ma&#770;care sau obiecte din natura&#774;</label><br>
+                            </fieldset>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><center>Acte necesare &#238;nscriere</center></td>
+                        <td colspan="4">
+                            <ol start="2">
+                                <li>Acte identificare candidat
+                                    <ul>
+                                        <li>Certificat de na&#351;tere</li>
+                                        <li>Buletin</li>
+                                        <li>Diplom&#259; absolvire 8 clase</li>
+                                    </ul>
+                                </li>
+                                <li>Acte doveditoare situa&#355;ie medical&#259;
+                                    <ol type="I">
+                                        <li>Certificat de diagnostic medic specialist</li>
+                                        <li>Scrisoare medical&#259; cu recomandari educatie</li>
+                                    </ol>
+                                </li>
+                                <li>Act doveditoar situa&#355;ie social&#259; (adeverin&#355;&#259; venit)</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><center>Necesar primele zile de &#351;coal&#259;</center></td>
+                        <td colspan="4">
+                            <ul>
+                                <li>Festivitate
+                                    <ol type="A">
+                                        <li>Uniform&#259; &#351;colar&#259;</li>
+                                        <li>Carnet de elev</li>
+                                        <li>Buchet de flori/Sticl&#259; de alcool pentru diriginte/dirigint&#259;</li>
+                                    </ol>
+                                </li>
+                                <li>C&#259;r&#355;i
+                                    <ul>
+                                        <li><a href="https://www.librariadelfin.ro/carte/manual-matematica-pentru-clasa-a-9-a-trunchi-comun-curriculum-diferentiat-mircea-ganga--i5638?gclid=Cj0KCQiApKagBhC1ARIsAFc7Mc4DvAwJBUMUK2SAzZ68EIJwcirGBAbbs9Yr2-Eg3pcSHqf9uuNKIfMaAmQSEALw_wcB" target="_blank">
+                                            Matematic&#259; Ganga
+                                        </a></li>
+                                        <li><a href="https://www.academia.edu/32433386/Manual_matematica_clasa_XI_M" target="_blank">
+                                            Culegere matematic&#259;
+                                        </a> </li>
+                                        <li> Manual Rom&#226;n&#259;</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2"><center>Mesaje pentru conducerea liceului </center></td>
+                        <td colspan="4" height="20px" width="60px"><textarea rows="10" cols="20"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" height="20px" width="60px"><textarea disabled readonly rows="5" cols="10">
+                            Nu completa
+                        </textarea></td>
+                    </tr>
                 </tbody>
             </table>
         </form>
