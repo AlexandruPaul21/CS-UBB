@@ -58,20 +58,20 @@ def plotNetwork(net, com=None):
     plt.show()
 
 
-def calculateQ(G):
+def fitness(G):
     edges = list(nx.edge_betweenness_centrality(G).items())  # [(edge, Q)]
-    mostCrossed = max(edges, key=lambda item: item[1])[0]
-    return mostCrossed
+    killEdge = max(edges, key=lambda item: item[1])[0]
+    return killEdge
 
 
-def greedyCommunitiesDetection(net, no_of_communities):
+def greedyCommunitiesDetection(net, expected):
     # Input: a graph
     # Output: list of community index (for every node)
 
     A = np.matrix(net["mat"])
     G = nx.from_numpy_matrix(A)
-    while len(list(nx.connected_components(G))) < no_of_communities:
-        source, destination = calculateQ(G)
+    while len(list(nx.connected_components(G))) < expected:
+        source, destination = fitness(G)
         G.remove_edge(source, destination)
 
     com = [1] * net['noNodes']
@@ -149,7 +149,7 @@ def getDictFromComArray(com):
 
 
 if __name__ == "__main__":
-    tests()
-    network = readNetworkFromGml("data/real/football.gml")
+    #tests()
+    network = readNetworkFromGml("data/real/dolphins.gml")
     communities = greedyCommunitiesDetection(network, 2)
     plotNetwork(network, communities)
