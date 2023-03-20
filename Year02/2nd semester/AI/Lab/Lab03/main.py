@@ -2,6 +2,7 @@ import random
 import warnings
 from utils import *
 from Chromosome import Chromosome
+from statistics import mean
 
 warnings.simplefilter("ignore")
 
@@ -21,8 +22,12 @@ def gAlgorithm(network, n0Communities):
         ch.fitness = problemParameters["function"](ch.repres, network)
         chromosomes.append(ch)
 
-    repeat = 100
-    for _ in range(repeat):
+    generations = 1000
+    averageValues = []
+    minimumValues = []
+    maximumValues = []
+    yPoints = []
+    for i in range(generations):
         initLen = len(chromosomes)
         for _ in range(initLen):
             a = random.randint(0, initLen - 1)
@@ -33,7 +38,27 @@ def gAlgorithm(network, n0Communities):
         for ch in chromosomes:
             ch.mutation()
 
+        chMax = max(chromosomes, key=lambda x: x.fitness)
+        chMin = min(chromosomes, key=lambda x: x.fitness)
+        chroms = [x.fitness for x in chromosomes]
+        chAvg = mean(chroms)
+
+        yPoints.append(i)
+        maximumValues.append(chMax.fitness)
+        minimumValues.append(chMin.fitness)
+        averageValues.append(chAvg)
+
+        # print(chMin.fitness, chMax.fitness, chAvg)
+
         chromosomes = sorted(chromosomes, key=lambda x: x.fitness, reverse=True)[:initLen]
+
+    import matplotlib.pyplot as plt
+
+    plt.plot(yPoints, minimumValues, label="Minimum")
+    plt.plot(yPoints, averageValues, label="Average")
+    plt.plot(yPoints, maximumValues, label="Maximum")
+    plt.legend()
+    plt.show()
 
     ch = max(chromosomes, key=lambda x: x.fitness)
     # print(ch)
@@ -41,5 +66,5 @@ def gAlgorithm(network, n0Communities):
 
 
 if __name__ == "__main__":
-    net = readNetworkFromGml("data/real/power.gml")
+    net = readNetworkFromGml("data/real/dolphins.gml")
     gAlgorithm(net, 2)
