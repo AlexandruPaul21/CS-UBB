@@ -7,10 +7,10 @@ from statistics import mean
 warnings.simplefilter("ignore")
 
 
-def gAlgorithm(network, n0Communities):
-    problemParameters = {
+def ga(network, no_communities):
+    problem_parameters = {
         "min": 1,
-        "max": n0Communities,
+        "max": no_communities,
         "noDim": network["noNodes"],
         "net": network,
         "function": modularity
@@ -18,8 +18,8 @@ def gAlgorithm(network, n0Communities):
     noChromosomes = network["noNodes"]
     chromosomes = []
     for _ in range(noChromosomes):
-        ch = Chromosome(problemParameters)
-        ch.fitness = problemParameters["function"](ch.repres, network)
+        ch = Chromosome(problem_parameters)
+        ch.fitness = problem_parameters["function"](ch.repres, network)
         chromosomes.append(ch)
 
     generations = 1000
@@ -67,4 +67,6 @@ def gAlgorithm(network, n0Communities):
 
 if __name__ == "__main__":
     net = readNetworkFromGml("data/real/dolphins.gml")
-    gAlgorithm(net, 2)
+    ga(net, 2)
+
+#%%

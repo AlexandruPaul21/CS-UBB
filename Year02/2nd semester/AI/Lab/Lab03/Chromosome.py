@@ -1,6 +1,5 @@
-import random
+
 from random import *
-from utils import generateNewValue, modularity
 
 
 class Chromosome:

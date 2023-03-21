@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    background-color: red;
+    height: 20%;
+}
+
+.footer {
+    background-color: pink;
+    height: 20%;
+}
+
+* {
+    margin: 0;
+}
+
+.menu {
+    float: left;
+    background-color: yellow;
+    list-style-type: none;
+    height: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.main-div {
+    display: inline-block;
+    background-color: green;
+    height: 60%;
+}
+
+.header, .footer, .main-div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
