@@ -68,5 +68,3 @@ def ga(network, no_communities):
 if __name__ == "__main__":
     net = readNetworkFromGml("data/real/dolphins.gml")
     ga(net, 2)
-
-#%%

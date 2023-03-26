@@ -1,4 +1,3 @@
-from chromosome import Chromosome
 from random import randint
 
 
@@ -14,12 +13,12 @@ class GA:
 
     def initialisation(self):
         for _ in range(0, self.__param['popSize']):
-            c = Chromosome(self.__problem_parameters)
+            c = self.__param["chromosome"](self.__problem_parameters)
             self.__population.append(c)
 
     def evaluation(self):
         for c in self.__population:
-            c.fitness = self.__problem_parameters['function'](c.repres)
+            c.fitness = self.__problem_parameters['function'](self.__problem_parameters, c.representation)
 
     def bestChromosome(self):
         best = self.__population[0]
