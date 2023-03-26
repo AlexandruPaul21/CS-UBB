@@ -1,0 +1,47 @@
+ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+}
+ul li {
+    position: relative;
+    display: block;
+    left: 111px;
+    margin: 1em 0 3.3em;
+    padding: 15px;
+    max-width: 15%;
+    min-height: 30%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+ul li::before {
+    position: absolute;
+    top: -20px;
+    left: -140px;
+    width: 128px;
+    height: 128px;
+    content: "";
+}
+ul li::after {
+    position: absolute;
+    top: 22px;
+    left: -13px;
+    width: 30px;
+    height: 18px;
+    background-color: white;
+    box-shadow: -1px 1px 0 black;
+    transform: skew(-15deg, -15deg) rotate(45deg);
+    content: "";
+}
+
+.alice::before {
+    width: 110px;
+    height: 110px;
+    background: url('bob-alice.png') 0 0;
+}
+.bob::before {
+    width: 110px;
+    height: 110px;
+    background: url('bob-alice.png') 0 -130px;
+}

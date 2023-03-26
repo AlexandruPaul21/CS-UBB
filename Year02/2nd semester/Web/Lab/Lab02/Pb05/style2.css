@@ -1,0 +1,17 @@
+img{
+    height: 180px;
+    width: 180px;
+    vertical-align: middle;
+}
+
+ul{
+    list-style-type: none;
+    border: 1px solid black;
+    width: 360px;
+    padding: 10px 20px;
+    background: yellow;
+}
+
+li{
+    padding: 10px 0;
+}
