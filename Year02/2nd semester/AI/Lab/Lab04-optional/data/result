@@ -1,0 +1,868 @@
+For the file:  easy01.txt the result is: 
+Chromosome: [1, 2, 3, 4] has fit: 14.
+Chromosome: [3, 4, 1, 2] has fit: 14.
+Chromosome: [3, 2, 1, 4] has fit: 14.
+Chromosome: [2, 3, 4, 1] has fit: 14.
+Chromosome: [4, 1, 2, 3] has fit: 14.
+Chromosome: [2, 1, 4, 3] has fit: 14.
+Chromosome: [1, 4, 3, 2] has fit: 14.
+Chromosome: [4, 3, 2, 1] has fit: 14.
+There are 8 solutions with fit 14 .
+
+For the file:  easy01.txt the result is: 
+Chromosome: [3, 2, 1, 4] has fit: 14.
+Chromosome: [4, 3, 2, 1] has fit: 14.
+Chromosome: [4, 1, 2, 3] has fit: 14.
+Chromosome: [2, 3, 4, 1] has fit: 14.
+Chromosome: [2, 1, 4, 3] has fit: 14.
+Chromosome: [3, 4, 1, 2] has fit: 14.
+Chromosome: [1, 2, 3, 4] has fit: 14.
+Chromosome: [1, 4, 3, 2] has fit: 14.
+There are 8 solutions with fit 14 .
+
+For the file:  easy01.txt the result is: 
+Chromosome: [2, 3, 4, 1] has fit: 14.
+Chromosome: [1, 4, 3, 2] has fit: 14.
+Chromosome: [2, 1, 4, 3] has fit: 14.
+Chromosome: [3, 2, 1, 4] has fit: 14.
+Chromosome: [4, 3, 2, 1] has fit: 14.
+Chromosome: [3, 4, 1, 2] has fit: 14.
+Chromosome: [4, 1, 2, 3] has fit: 14.
+Chromosome: [1, 2, 3, 4] has fit: 14.
+There are 8 solutions with fit 14 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [3, 2, 1, 6, 5, 4] has fit: 1000010.
+Chromosome: [4, 3, 2, 1, 6, 5] has fit: 1000010.
+Chromosome: [1, 6, 5, 4, 3, 2] has fit: 1000010.
+Chromosome: [5, 6, 1, 2, 3, 4] has fit: 1000010.
+Chromosome: [2, 1, 6, 5, 4, 3] has fit: 1000010.
+There are 5 solutions with fit 1000010 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [4, 5, 3, 2, 6, 1] has fit: 28.
+Chromosome: [1, 4, 5, 3, 2, 6] has fit: 28.
+Chromosome: [5, 4, 1, 6, 2, 3] has fit: 28.
+Chromosome: [6, 2, 3, 5, 4, 1] has fit: 28.
+Chromosome: [3, 2, 6, 1, 4, 5] has fit: 28.
+Chromosome: [2, 3, 5, 4, 1, 6] has fit: 28.
+Chromosome: [3, 5, 4, 1, 6, 2] has fit: 28.
+Chromosome: [4, 1, 6, 2, 3, 5] has fit: 28.
+Chromosome: [2, 6, 1, 4, 5, 3] has fit: 28.
+Chromosome: [5, 3, 2, 6, 1, 4] has fit: 28.
+Chromosome: [1, 6, 2, 3, 5, 4] has fit: 28.
+There are 11 solutions with fit 28 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [3, 2, 6, 1, 4, 5] has fit: 28.
+Chromosome: [2, 3, 5, 4, 1, 6] has fit: 28.
+Chromosome: [5, 4, 1, 6, 2, 3] has fit: 28.
+Chromosome: [2, 6, 1, 4, 5, 3] has fit: 28.
+Chromosome: [5, 3, 2, 6, 1, 4] has fit: 28.
+Chromosome: [4, 5, 3, 2, 6, 1] has fit: 28.
+There are 6 solutions with fit 28 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [3, 2, 6, 1, 4, 5] has fit: 28.
+Chromosome: [4, 1, 6, 2, 3, 5] has fit: 28.
+Chromosome: [1, 6, 2, 3, 5, 4] has fit: 28.
+Chromosome: [6, 2, 3, 5, 4, 1] has fit: 28.
+Chromosome: [4, 5, 3, 2, 6, 1] has fit: 28.
+Chromosome: [5, 4, 1, 6, 2, 3] has fit: 28.
+Chromosome: [6, 1, 4, 5, 3, 2] has fit: 28.
+Chromosome: [2, 6, 1, 4, 5, 3] has fit: 28.
+There are 8 solutions with fit 28 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [1, 6, 2, 3, 5, 4] has fit: 28.
+Chromosome: [4, 5, 3, 2, 6, 1] has fit: 28.
+Chromosome: [2, 3, 5, 4, 1, 6] has fit: 28.
+Chromosome: [6, 2, 3, 5, 4, 1] has fit: 28.
+Chromosome: [6, 1, 4, 5, 3, 2] has fit: 28.
+Chromosome: [3, 2, 6, 1, 4, 5] has fit: 28.
+There are 6 solutions with fit 28 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [6, 1, 2, 3, 4, 5] has fit: 1000010.
+Chromosome: [5, 6, 1, 2, 3, 4] has fit: 1000010.
+There are 2 solutions with fit 1000010 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [4, 5, 3, 2, 6, 1] has fit: 28.
+Chromosome: [4, 1, 6, 2, 3, 5] has fit: 28.
+Chromosome: [2, 6, 1, 4, 5, 3] has fit: 28.
+Chromosome: [6, 1, 4, 5, 3, 2] has fit: 28.
+Chromosome: [5, 3, 2, 6, 1, 4] has fit: 28.
+Chromosome: [3, 2, 6, 1, 4, 5] has fit: 28.
+Chromosome: [5, 4, 1, 6, 2, 3] has fit: 28.
+Chromosome: [6, 2, 3, 5, 4, 1] has fit: 28.
+Chromosome: [2, 3, 5, 4, 1, 6] has fit: 28.
+Chromosome: [3, 5, 4, 1, 6, 2] has fit: 28.
+There are 10 solutions with fit 28 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [1, 6, 2, 3, 5, 4] has fit: 28.
+Chromosome: [4, 5, 3, 2, 6, 1] has fit: 28.
+Chromosome: [3, 5, 4, 1, 6, 2] has fit: 28.
+Chromosome: [6, 2, 3, 5, 4, 1] has fit: 28.
+There are 4 solutions with fit 28 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [4, 1, 6, 2, 3, 5] has fit: 28.
+Chromosome: [4, 5, 3, 2, 6, 1] has fit: 28.
+Chromosome: [6, 2, 3, 5, 4, 1] has fit: 28.
+There are 3 solutions with fit 28 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [4, 3, 1, 7, 2, 6, 5] has fit: 1000019.
+Chromosome: [2, 6, 5, 4, 3, 1, 7] has fit: 1000019.
+Chromosome: [7, 2, 6, 5, 4, 3, 1] has fit: 1000019.
+Chromosome: [1, 3, 4, 5, 6, 2, 7] has fit: 1000019.
+There are 4 solutions with fit 1000019 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [6, 2, 4, 3, 1, 7, 5] has fit: 1000020.
+Chromosome: [7, 1, 3, 4, 2, 6, 5] has fit: 1000020.
+Chromosome: [5, 7, 1, 3, 4, 2, 6] has fit: 1000020.
+There are 3 solutions with fit 1000020 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [4, 3, 2, 1, 7, 6, 5] has fit: 31.
+Chromosome: [4, 5, 6, 7, 1, 2, 3] has fit: 31.
+Chromosome: [6, 5, 4, 3, 2, 1, 7] has fit: 31.
+Chromosome: [5, 6, 7, 1, 2, 3, 4] has fit: 31.
+Chromosome: [7, 1, 2, 3, 4, 5, 6] has fit: 31.
+Chromosome: [2, 1, 7, 6, 5, 4, 3] has fit: 31.
+Chromosome: [1, 2, 3, 4, 5, 6, 7] has fit: 31.
+There are 7 solutions with fit 31 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [2, 3, 4, 5, 6, 1, 7] has fit: 1000022.
+There are 1 solutions with fit 1000022 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [7, 6, 5, 4, 3, 2, 1] has fit: 31.
+Chromosome: [2, 1, 7, 6, 5, 4, 3] has fit: 31.
+There are 2 solutions with fit 31 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [1, 3, 4, 5, 6, 2, 7] has fit: 1000019.
+Chromosome: [5, 4, 3, 1, 7, 2, 6] has fit: 1000019.
+There are 2 solutions with fit 1000019 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [3, 7, 1, 2, 6, 5, 4] has fit: 1000016.
+There are 1 solutions with fit 1000016 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [3, 2, 1, 7, 6, 5, 4] has fit: 31.
+There are 1 solutions with fit 31 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [7, 1, 3, 2, 4, 5, 6] has fit: 32.
+There are 1 solutions with fit 32 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [6, 7, 1, 2, 3, 4, 5] has fit: 31.
+Chromosome: [3, 2, 1, 7, 6, 5, 4] has fit: 31.
+Chromosome: [5, 4, 3, 2, 1, 7, 6] has fit: 31.
+There are 3 solutions with fit 31 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [6, 7, 1, 2, 3, 4, 5] has fit: 31.
+Chromosome: [7, 1, 2, 3, 4, 5, 6] has fit: 31.
+Chromosome: [5, 4, 3, 2, 1, 7, 6] has fit: 31.
+Chromosome: [5, 6, 7, 1, 2, 3, 4] has fit: 31.
+Chromosome: [3, 2, 1, 7, 6, 5, 4] has fit: 31.
+Chromosome: [1, 7, 6, 5, 4, 3, 2] has fit: 31.
+Chromosome: [2, 1, 7, 6, 5, 4, 3] has fit: 31.
+There are 7 solutions with fit 31 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [7, 1, 2, 3, 4, 5, 6] has fit: 31.
+Chromosome: [1, 2, 3, 4, 5, 6, 7] has fit: 31.
+There are 2 solutions with fit 31 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [2, 3, 4, 5, 6, 7, 1] has fit: 31.
+Chromosome: [4, 5, 6, 7, 1, 2, 3] has fit: 31.
+Chromosome: [7, 6, 5, 4, 3, 2, 1] has fit: 31.
+Chromosome: [1, 2, 3, 4, 5, 6, 7] has fit: 31.
+There are 4 solutions with fit 31 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [1, 4, 5, 3, 2, 6] has fit: 28.
+Chromosome: [4, 1, 6, 2, 3, 5] has fit: 28.
+Chromosome: [5, 4, 1, 6, 2, 3] has fit: 28.
+Chromosome: [3, 2, 6, 1, 4, 5] has fit: 28.
+There are 4 solutions with fit 28 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [5, 1, 6, 2, 3, 4] has fit: 1000012.
+Chromosome: [1, 5, 4, 3, 2, 6] has fit: 1000012.
+Chromosome: [6, 1, 5, 4, 3, 2] has fit: 1000012.
+Chromosome: [3, 4, 5, 1, 6, 2] has fit: 1000012.
+Chromosome: [2, 6, 1, 5, 4, 3] has fit: 1000012.
+Chromosome: [2, 3, 4, 5, 1, 6] has fit: 1000012.
+There are 6 solutions with fit 1000012 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [6, 2, 3, 5, 4, 1] has fit: 28.
+Chromosome: [6, 1, 4, 5, 3, 2] has fit: 28.
+Chromosome: [4, 5, 3, 2, 6, 1] has fit: 28.
+Chromosome: [3, 5, 4, 1, 6, 2] has fit: 28.
+Chromosome: [1, 4, 5, 3, 2, 6] has fit: 28.
+Chromosome: [5, 3, 2, 6, 1, 4] has fit: 28.
+Chromosome: [2, 6, 1, 4, 5, 3] has fit: 28.
+Chromosome: [1, 6, 2, 3, 5, 4] has fit: 28.
+Chromosome: [3, 2, 6, 1, 4, 5] has fit: 28.
+Chromosome: [2, 3, 5, 4, 1, 6] has fit: 28.
+There are 10 solutions with fit 28 .
+
+For the file:  easy03.txt the result is: 
+Chromosome: [5, 4, 1, 6, 2, 3] has fit: 28.
+Chromosome: [1, 6, 2, 3, 5, 4] has fit: 28.
+There are 2 solutions with fit 28 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [5, 4, 3, 2, 1, 7, 6] has fit: 31.
+There are 1 solutions with fit 31 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [3, 7, 8, 2, 6, 4, 5, 1] has fit: 24.
+There are 1 solutions with fit 24 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [8, 2, 3, 1, 6, 5, 4, 7] has fit: 27.
+Chromosome: [2, 6, 7, 8, 4, 5, 1, 3] has fit: 27.
+Chromosome: [4, 5, 2, 6, 1, 3, 7, 8] has fit: 27.
+There are 3 solutions with fit 27 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [3, 6, 2, 7, 8, 4, 5, 1] has fit: 24.
+Chromosome: [5, 2, 8, 7, 4, 6, 3, 1] has fit: 24.
+There are 2 solutions with fit 24 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [8, 7, 2, 5, 1, 3, 6, 4] has fit: 25.
+Chromosome: [5, 1, 6, 2, 3, 8, 7, 4] has fit: 25.
+Chromosome: [2, 3, 5, 1, 6, 4, 7, 8] has fit: 25.
+Chromosome: [1, 5, 3, 2, 8, 7, 4, 6] has fit: 25.
+There are 4 solutions with fit 25 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [8, 7, 4, 5, 1, 6, 3, 2] has fit: 24.
+Chromosome: [5, 4, 8, 7, 2, 6, 3, 1] has fit: 24.
+There are 2 solutions with fit 24 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [4, 7, 8, 2, 5, 1, 3, 6] has fit: 24.
+Chromosome: [3, 8, 7, 2, 6, 4, 5, 1] has fit: 24.
+Chromosome: [8, 7, 4, 6, 3, 1, 5, 2] has fit: 24.
+Chromosome: [1, 3, 2, 6, 4, 7, 8, 5] has fit: 24.
+Chromosome: [4, 6, 2, 7, 8, 3, 1, 5] has fit: 24.
+Chromosome: [8, 2, 3, 6, 1, 5, 4, 7] has fit: 24.
+Chromosome: [8, 7, 4, 5, 1, 6, 3, 2] has fit: 24.
+Chromosome: [4, 5, 1, 3, 6, 2, 7, 8] has fit: 24.
+Chromosome: [8, 7, 2, 6, 3, 1, 5, 4] has fit: 24.
+Chromosome: [7, 4, 6, 2, 3, 1, 5, 8] has fit: 24.
+Chromosome: [2, 7, 8, 3, 1, 5, 4, 6] has fit: 24.
+There are 11 solutions with fit 24 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [2, 6, 4, 7, 8, 5, 3, 1] has fit: 26.
+Chromosome: [1, 3, 2, 8, 7, 6, 4, 5] has fit: 26.
+There are 2 solutions with fit 26 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [5, 4, 6, 1, 3, 2, 8, 7] has fit: 25.
+Chromosome: [4, 7, 8, 2, 3, 5, 1, 6] has fit: 25.
+Chromosome: [8, 2, 3, 1, 6, 4, 5, 7] has fit: 25.
+Chromosome: [3, 2, 6, 1, 5, 4, 7, 8] has fit: 25.
+Chromosome: [6, 3, 8, 7, 2, 1, 5, 4] has fit: 25.
+Chromosome: [3, 2, 6, 4, 8, 7, 5, 1] has fit: 25.
+Chromosome: [8, 2, 1, 3, 6, 4, 5, 7] has fit: 25.
+Chromosome: [6, 3, 5, 1, 2, 8, 7, 4] has fit: 25.
+Chromosome: [2, 1, 5, 4, 6, 3, 7, 8] has fit: 25.
+Chromosome: [5, 1, 6, 2, 3, 8, 7, 4] has fit: 25.
+Chromosome: [7, 8, 3, 1, 5, 2, 6, 4] has fit: 25.
+Chromosome: [6, 4, 5, 8, 7, 2, 1, 3] has fit: 25.
+Chromosome: [3, 2, 8, 7, 5, 4, 6, 1] has fit: 25.
+Chromosome: [2, 8, 7, 1, 5, 4, 6, 3] has fit: 25.
+Chromosome: [2, 3, 6, 4, 7, 8, 5, 1] has fit: 25.
+Chromosome: [6, 1, 5, 4, 8, 7, 2, 3] has fit: 25.
+There are 16 solutions with fit 25 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [7, 8, 5, 3, 1, 2, 6, 4] has fit: 26.
+Chromosome: [7, 8, 6, 2, 3, 1, 5, 4] has fit: 26.
+There are 2 solutions with fit 26 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [6, 1, 5, 4, 7, 8, 2, 3] has fit: 24.
+There are 1 solutions with fit 24 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [3, 8, 7, 2, 6, 4, 5, 1] has fit: 24.
+Chromosome: [5, 4, 7, 8, 2, 3, 6, 1] has fit: 24.
+Chromosome: [8, 7, 4, 6, 3, 1, 5, 2] has fit: 24.
+There are 3 solutions with fit 24 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [3, 6, 2, 7, 8, 4, 5, 1] has fit: 24.
+Chromosome: [4, 7, 8, 2, 3, 6, 1, 5] has fit: 24.
+There are 2 solutions with fit 24 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [8, 7, 2, 4, 6, 1, 5, 3] has fit: 29.
+There are 1 solutions with fit 29 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [1, 3, 2, 6, 4, 5, 8, 7] has fit: 26.
+There are 1 solutions with fit 26 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [3, 1, 5, 4, 6, 2, 8, 7] has fit: 24.
+There are 1 solutions with fit 24 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [7, 8, 2, 6, 3, 1, 5, 4] has fit: 23.
+There are 1 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [7, 4, 5, 1, 3, 6, 2, 8] has fit: 23.
+There are 1 solutions with fit 23 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [10, 8, 2, 15, 9, 5, 7, 3, 12, 14, 6, 4, 11, 1, 13] has fit: 327.
+There are 1 solutions with fit 327 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [6, 8, 10, 3, 12, 14, 7, 5, 9, 15, 2, 13, 1, 11, 4] has fit: 320.
+There are 1 solutions with fit 320 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [5, 15, 9, 7, 3, 14, 12, 6, 4, 11, 8, 10, 1, 2, 13] has fit: 388.
+There are 1 solutions with fit 388 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [7, 3, 12, 14, 10, 8, 2, 13, 1, 11, 4, 6, 9, 15, 5] has fit: 327.
+There are 1 solutions with fit 327 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [13, 2, 15, 9, 5, 7, 3, 12, 14, 8, 10, 6, 4, 11, 1] has fit: 307.
+There are 1 solutions with fit 307 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [4, 6, 8, 14, 12, 10, 3, 7, 5, 9, 15, 2, 13, 1, 11] has fit: 313.
+There are 1 solutions with fit 313 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [12, 3, 7, 5, 15, 9, 8, 6, 4, 11, 1, 13, 2, 10, 14] has fit: 321.
+There are 1 solutions with fit 321 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [2, 13, 1, 12, 15, 9, 6, 4, 11, 8, 10, 14, 3, 7, 5] has fit: 459.
+There are 1 solutions with fit 459 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [6, 4, 10, 8, 13, 9, 5, 15, 2, 1, 11, 14, 7, 3, 12] has fit: 443.
+There are 1 solutions with fit 443 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [10, 14, 12, 3, 7, 5, 15, 9, 8, 6, 4, 11, 1, 13, 2] has fit: 321.
+There are 1 solutions with fit 321 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [2, 10, 14, 12, 3, 7, 5, 15, 9, 8, 6, 4, 11, 1, 13] has fit: 321.
+There are 1 solutions with fit 321 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [8, 12, 14, 6, 4, 11, 1, 13, 2, 15, 9, 5, 7, 3, 10] has fit: 315.
+There are 1 solutions with fit 315 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [7, 3, 12, 14, 10, 8, 6, 4, 11, 1, 13, 2, 15, 9, 5] has fit: 291.
+There are 1 solutions with fit 291 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [6, 4, 1, 15, 13, 2, 9, 5, 7, 12, 14, 3, 10, 8, 11] has fit: 401.
+There are 1 solutions with fit 401 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [12, 3, 7, 5, 15, 9, 10, 8, 2, 13, 1, 11, 4, 6, 14] has fit: 307.
+There are 1 solutions with fit 307 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [12, 14, 10, 8, 6, 4, 11, 1, 13, 2, 15, 9, 5, 7, 3] has fit: 291.
+Chromosome: [3, 12, 14, 10, 8, 6, 4, 11, 1, 13, 2, 15, 9, 5, 7] has fit: 291.
+There are 2 solutions with fit 291 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [8, 10, 3, 12, 14, 7, 5, 9, 15, 2, 13, 1, 11, 4, 6] has fit: 320.
+There are 1 solutions with fit 320 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [7, 3, 10, 12, 14, 8, 6, 4, 11, 1, 13, 2, 15, 9, 5] has fit: 313.
+There are 1 solutions with fit 313 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [12, 14, 6, 4, 11, 1, 13, 2, 15, 5, 9, 7, 3, 10, 8] has fit: 327.
+There are 1 solutions with fit 327 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [11, 1, 12, 2, 7, 5, 9, 3, 8, 10, 6, 4] has fit: 337.
+There are 1 solutions with fit 337 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [6, 3, 1, 5, 4, 7, 8, 2] has fit: 23.
+There are 1 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [1, 5, 4, 7, 8, 2, 6, 3] has fit: 23.
+Chromosome: [2, 6, 3, 1, 5, 4, 7, 8] has fit: 23.
+There are 2 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [6, 3, 1, 5, 4, 7, 8, 2] has fit: 23.
+There are 1 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [4, 5, 1, 3, 6, 2, 8, 7] has fit: 23.
+Chromosome: [3, 6, 2, 8, 7, 4, 5, 1] has fit: 23.
+There are 2 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [4, 5, 1, 6, 3, 2, 7, 8] has fit: 25.
+There are 1 solutions with fit 25 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [5, 4, 6, 1, 2, 3, 8, 7] has fit: 27.
+Chromosome: [7, 8, 4, 5, 3, 6, 1, 2] has fit: 27.
+Chromosome: [8, 2, 1, 3, 6, 5, 4, 7] has fit: 27.
+There are 3 solutions with fit 27 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [3, 8, 7, 2, 1, 5, 4, 6] has fit: 25.
+There are 1 solutions with fit 25 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [8, 3, 1, 5, 2, 6, 4, 7] has fit: 25.
+There are 1 solutions with fit 25 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [4, 7, 8, 2, 6, 3, 1, 5] has fit: 23.
+There are 1 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [3, 6, 2, 8, 7, 4, 5, 1] has fit: 23.
+Chromosome: [2, 8, 7, 4, 5, 1, 3, 6] has fit: 23.
+There are 2 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [4, 5, 1, 3, 6, 2, 8, 7] has fit: 23.
+Chromosome: [3, 6, 2, 8, 7, 4, 5, 1] has fit: 23.
+There are 2 solutions with fit 23 .
+
+For the file:  easy01.txt the result is: 
+Chromosome: [2, 3, 4, 1] has fit: 14.
+Chromosome: [2, 1, 4, 3] has fit: 14.
+There are 2 solutions with fit 14 .
+
+For the file:  easy01.txt the result is: 
+Chromosome: [1, 2, 3, 4] has fit: 14.
+Chromosome: [2, 1, 4, 3] has fit: 14.
+Chromosome: [4, 3, 2, 1] has fit: 14.
+Chromosome: [2, 3, 4, 1] has fit: 14.
+Chromosome: [4, 1, 2, 3] has fit: 14.
+Chromosome: [3, 4, 1, 2] has fit: 14.
+Chromosome: [3, 2, 1, 4] has fit: 14.
+Chromosome: [1, 4, 3, 2] has fit: 14.
+There are 8 solutions with fit 14 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [4, 5, 1, 3, 6, 2, 8, 7] has fit: 23.
+Chromosome: [7, 8, 2, 6, 3, 1, 5, 4] has fit: 23.
+Chromosome: [4, 7, 8, 2, 6, 3, 1, 5] has fit: 23.
+There are 3 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [3, 6, 2, 8, 7, 4, 5, 1] has fit: 23.
+Chromosome: [5, 1, 3, 6, 2, 8, 7, 4] has fit: 23.
+There are 2 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [7, 8, 3, 1, 5, 4, 6, 2] has fit: 24.
+Chromosome: [7, 8, 4, 5, 1, 3, 6, 2] has fit: 24.
+There are 2 solutions with fit 24 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [2, 8, 7, 4, 5, 1, 3, 6] has fit: 23.
+Chromosome: [5, 1, 3, 6, 2, 8, 7, 4] has fit: 23.
+Chromosome: [6, 2, 8, 7, 4, 5, 1, 3] has fit: 23.
+Chromosome: [6, 3, 1, 5, 4, 7, 8, 2] has fit: 23.
+Chromosome: [4, 5, 1, 3, 6, 2, 8, 7] has fit: 23.
+Chromosome: [7, 8, 2, 6, 3, 1, 5, 4] has fit: 23.
+Chromosome: [3, 6, 2, 8, 7, 4, 5, 1] has fit: 23.
+Chromosome: [2, 6, 3, 1, 5, 4, 7, 8] has fit: 23.
+Chromosome: [8, 7, 4, 5, 1, 3, 6, 2] has fit: 23.
+Chromosome: [1, 5, 4, 7, 8, 2, 6, 3] has fit: 23.
+Chromosome: [1, 3, 6, 2, 8, 7, 4, 5] has fit: 23.
+There are 11 solutions with fit 23 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [8, 7, 4, 5, 1, 3, 6, 2] has fit: 23.
+Chromosome: [3, 6, 2, 8, 7, 4, 5, 1] has fit: 23.
+There are 2 solutions with fit 23 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [4, 6, 3, 5, 9, 7, 8, 10, 2, 1, 12, 11] has fit: 308.
+There are 1 solutions with fit 308 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [12, 1, 2, 7, 8, 10, 9, 5, 3, 6, 4, 11] has fit: 326.
+There are 1 solutions with fit 326 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [9, 3, 8, 10, 6, 4, 11, 12, 1, 2, 7, 5] has fit: 292.
+Chromosome: [5, 9, 3, 8, 10, 6, 4, 11, 12, 1, 2, 7] has fit: 292.
+There are 2 solutions with fit 292 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [12, 1, 2, 7, 5, 9, 3, 6, 10, 8, 4, 11] has fit: 320.
+There are 1 solutions with fit 320 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [11, 12, 1, 2, 10, 6, 8, 7, 5, 9, 3, 4] has fit: 340.
+There are 1 solutions with fit 340 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [4, 11, 12, 1, 2, 10, 9, 7, 5, 3, 8, 6] has fit: 293.
+There are 1 solutions with fit 293 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [7, 8, 6, 10, 2, 1, 12, 11, 4, 3, 9, 5] has fit: 340.
+There are 1 solutions with fit 340 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [10, 8, 3, 9, 5, 7, 2, 1, 12, 11, 4, 6] has fit: 292.
+There are 1 solutions with fit 292 .
+
+For the file:  hard01.txt the result is: 
+Chromosome: [4, 11, 1, 13, 2, 15, 9, 5, 7, 3, 12, 14, 10, 8, 6] has fit: 291.
+There are 1 solutions with fit 291 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [4, 6, 10, 8, 3, 9, 5, 7, 2, 1, 12, 11] has fit: 292.
+Chromosome: [12, 11, 4, 6, 10, 8, 3, 9, 5, 7, 2, 1] has fit: 292.
+There are 2 solutions with fit 292 .
+
+For the file:  medium01.txt the result is: 
+Chromosome: [6, 5, 4, 3, 2, 1, 7] has fit: 31.
+Chromosome: [1, 2, 3, 4, 5, 6, 7] has fit: 31.
+There are 2 solutions with fit 31 .
+
+For the file:  medium02.txt the result is: 
+Chromosome: [8, 2, 6, 3, 1, 5, 4, 7] has fit: 23.
+Chromosome: [7, 8, 2, 6, 3, 1, 5, 4] has fit: 23.
+There are 2 solutions with fit 23 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [4, 3, 8, 10, 9, 7, 5, 2, 1, 12, 11, 6] has fit: 330.
+There are 1 solutions with fit 330 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [10, 8, 7, 6, 4, 11, 12, 1, 2, 5, 3, 9] has fit: 351.
+There are 1 solutions with fit 351 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [2, 10, 8, 3, 6, 4, 11, 1, 12, 7, 9, 5] has fit: 336.
+There are 1 solutions with fit 336 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [10, 8, 3, 5, 9, 7, 2, 1, 12, 11, 4, 6] has fit: 297.
+There are 1 solutions with fit 297 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [3, 9, 5, 7, 2, 1, 12, 11, 4, 6, 10, 8] has fit: 292.
+There are 1 solutions with fit 292 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [6, 10, 8, 3, 9, 5, 7, 2, 1, 12, 11, 4] has fit: 292.
+There are 1 solutions with fit 292 .
+
+For the file:  hard02.txt the result is: 
+Chromosome: [10, 2, 1, 12, 11, 4, 6, 8, 3, 5, 7, 9] has fit: 293.
+Chromosome: [6, 8, 3, 5, 7, 9, 10, 2, 1, 12, 11, 4] has fit: 293.
+There are 2 solutions with fit 293 .
+
+
+And the shortest paths from source 2 to 4 are:
+Chromosome: [3, 2, 5, 1, 4] has fit: 19.
+There are 1 solutions with fit 19 .
+
+
+And the shortest paths from source 2 to 4 are:
+Chromosome: [2, 1, 4] has fit: 20.
+There are 1 solutions with fit 20 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 1, 4, 6] has fit: 2147483776.
+There are 1 solutions with fit 2147483776 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 1, 4, 6] has fit: 2147483776.
+There are 1 solutions with fit 2147483776 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 4, 6] has fit: 2147483757.
+There are 1 solutions with fit 2147483757 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 4, 1, 6] has fit: 2147483840.
+There are 1 solutions with fit 2147483840 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 2, 6] has fit: 2147483756.
+There are 1 solutions with fit 2147483756 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 1, 6] has fit: 2147483767.
+There are 1 solutions with fit 2147483767 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 4, 2, 6] has fit: 2147483831.
+There are 1 solutions with fit 2147483831 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 2, 6] has fit: 2147483756.
+There are 1 solutions with fit 2147483756 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 3, 2, 4, 6] has fit: 2147483809.
+There are 1 solutions with fit 2147483809 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 1, 6] has fit: 2147483767.
+There are 1 solutions with fit 2147483767 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 1, 6] has fit: 2147483767.
+There are 1 solutions with fit 2147483767 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 1, 6] has fit: 2147483767.
+There are 1 solutions with fit 2147483767 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 1, 4, 6] has fit: 2147483776.
+There are 1 solutions with fit 2147483776 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 4, 6] has fit: 2147483757.
+There are 1 solutions with fit 2147483757 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 2, 6] has fit: 2147483756.
+There are 1 solutions with fit 2147483756 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 1, 6] has fit: 2147483767.
+There are 1 solutions with fit 2147483767 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 2, 4, 6] has fit: 2147483774.
+There are 1 solutions with fit 2147483774 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 2, 6] has fit: 2147483756.
+There are 1 solutions with fit 2147483756 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 6] has fit: 4294967294.
+There are 1 solutions with fit 4294967294 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 2, 6] has fit: 2147483756.
+There are 1 solutions with fit 2147483756 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 2, 6] has fit: 2147483756.
+There are 1 solutions with fit 2147483756 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 2, 6] has fit: 109.
+There are 1 solutions with fit 109 .
+
+
+And the shortest paths from source 5 to 6 are:
+Chromosome: [5, 7, 2, 6] has fit: 109.
+There are 1 solutions with fit 109 .
+
+For the file:  easy02.txt the result is: 
+Chromosome: [5, 2, 3, 4, 1] has fit: 19.
+Chromosome: [4, 1, 5, 2, 3] has fit: 19.
+There are 2 solutions with fit 19 .
+
+
+And the shortest paths from source 2 to 4 are:
+Chromosome: [2, 1, 4] has fit: 5.
+There are 1 solutions with fit 5 .
+
+
+For the file:  hard02.txt the result is: 
+Chromosome: [6, 4, 11, 12, 1, 2, 7, 5, 9, 3, 8, 10] has fit: 292.
+There are 1 solutions with fit 292 .
+
+
+And the shortest paths from source 7 to 5 are:
+Chromosome: [7, 5] has fit: 23.
+There are 1 solutions with fit 23 .
+
+
+For the file:  hard02.txt the result is: 
+Chromosome: [11, 12, 1, 2, 7, 5, 9, 3, 8, 10, 6, 4] has fit: 292.
+There are 1 solutions with fit 292 .
+
+
+And the shortest paths from source 1 to 8 are:
+Chromosome: [1, 6, 8] has fit: 75.
+There are 1 solutions with fit 75 .
+
+
+For the file:  hard02.txt the result is: 
+Chromosome: [4, 6, 3, 9, 5, 7, 8, 10, 2, 1, 12, 11] has fit: 303.
+Chromosome: [11, 4, 6, 3, 9, 5, 7, 8, 10, 2, 1, 12] has fit: 303.
+Chromosome: [12, 11, 4, 6, 3, 9, 5, 7, 8, 10, 2, 1] has fit: 303.
+There are 3 solutions with fit 303 .
+
+
+For the file:  easy01.txt the result is: 
+Chromosome: [3, 4, 1, 2] has fit: 14.
+Chromosome: [2, 3, 4, 1] has fit: 14.
+There are 2 solutions with fit 14 .
+
+
+And the shortest paths from source 2 to 4 are:
+Chromosome: [2, 1, 4] has fit: 5.
+There are 1 solutions with fit 5 .
+
+
+For the file:  easy02.txt the result is: 
+Chromosome: [4, 1, 5, 2, 3] has fit: 19.
+Chromosome: [4, 3, 2, 5, 1] has fit: 19.
+There are 2 solutions with fit 19 .
+
+
+And the shortest paths from source 2 to 4 are:
+Chromosome: [2, 1, 4] has fit: 5.
+There are 1 solutions with fit 5 .
+
+
+For the file:  easy02.txt the result is: 
+Chromosome: [1, 4, 3, 2, 5] has fit: 19.
+Chromosome: [5, 1, 4, 3, 2] has fit: 19.
+There are 2 solutions with fit 19 .
+
+
+And the shortest paths from source 1 to 4 are:
+Chromosome: [1, 4] has fit: 4.
+There are 1 solutions with fit 4 .
+
+
+For the file:  easy02.txt the result is: 
+Chromosome: [4, 1, 5, 2, 3] has fit: 19.
+There are 1 solutions with fit 19 .
+
+
+And the shortest paths from source 1 to 5 are:
+Chromosome: [1, 5] has fit: 3.
+There are 1 solutions with fit 3 .
+
+
+For the file:  easy02.txt the result is: 
+Chromosome: [2, 5, 1, 4, 3] has fit: 19.
+Chromosome: [1, 5, 2, 3, 4] has fit: 19.
+There are 2 solutions with fit 19 .
+
+
+And the shortest paths from source 2 to 4 are:
+Chromosome: [2, 1, 4] has fit: 5.
+There are 1 solutions with fit 5 .
+
+
+For the file:  easy03.txt the result is: 
+Chromosome: [4, 5, 3, 2, 6, 1] has fit: 28.
+There are 1 solutions with fit 28 .
+
+
+And the shortest paths from source 2 to 4 are:
+Chromosome: [2, 3, 4] has fit: 4.
+There are 1 solutions with fit 4 .
+
+
+For the file:  medium01.txt the result is: 
+Chromosome: [6, 7, 1, 2, 3, 4, 5] has fit: 31.
+Chromosome: [3, 4, 5, 6, 7, 1, 2] has fit: 31.
+There are 2 solutions with fit 31 .
+
+
+And the shortest paths from source 1 to 5 are:
+Chromosome: [1, 6, 5] has fit: 6.
+There are 1 solutions with fit 6 .
+
+
+For the file:  eil51.txt the result is: 
+Chromosome: [2, 20, 43, 23, 24, 41, 19, 40, 42, 4, 45, 33, 30, 21, 9, 10, 49, 15, 37, 12, 6, 14, 25, 18, 47, 51, 46, 35, 36, 22, 8, 26, 7, 48, 27, 50, 34, 29, 31, 28, 3, 11, 38, 5, 13, 17, 44, 39, 16, 32, 1] has fit: 775.
+There are 1 solutions with fit 775 .
+
+
+For the file:  eil51.txt the result is: 
+Chromosome: [32, 27, 51, 12, 46, 8, 48, 23, 24, 43, 7, 26, 31, 28, 36, 35, 3, 20, 2, 11, 49, 5, 4, 42, 33, 39, 30, 9, 34, 50, 21, 29, 22, 6, 25, 14, 47, 15, 45, 44, 17, 18, 13, 41, 19, 40, 37, 10, 38, 16, 1] has fit: 623.
+Chromosome: [32, 27, 46, 12, 51, 8, 48, 23, 24, 43, 7, 26, 31, 28, 36, 35, 3, 20, 2, 11, 49, 5, 4, 42, 33, 39, 30, 9, 34, 50, 21, 29, 22, 6, 25, 14, 47, 15, 45, 44, 17, 18, 13, 41, 19, 40, 37, 10, 38, 16, 1] has fit: 623.
+There are 2 solutions with fit 623 .
+
+
+For the file:  eil51.txt the result is: 
+Chromosome: [30, 39, 33, 45, 15, 37, 44, 42, 19, 13, 40, 41, 4, 17, 12, 47, 18, 25, 14, 24, 43, 23, 7, 8, 27, 1, 2, 16, 50, 34, 21, 29, 9, 49, 5, 46, 51, 6, 48, 26, 31, 28, 3, 36, 35, 20, 22, 32, 11, 38, 10] has fit: 498.
+There are 1 solutions with fit 498 .
+
+
+For the file:  eil51.txt the result is: 
+Chromosome: [9, 16, 11, 2, 28, 36, 35, 3, 32, 5, 37, 12, 51, 46, 6, 14, 25, 13, 18, 4, 41, 40, 19, 42, 15, 44, 10, 34, 30, 39, 33, 45, 17, 47, 27, 48, 24, 43, 23, 7, 26, 8, 31, 1, 22, 20, 29, 50, 21, 38, 49] has fit: 592.
+Chromosome: [9, 16, 11, 2, 28, 36, 35, 3, 32, 5, 37, 15, 44, 10, 34, 30, 39, 33, 45, 12, 51, 46, 6, 14, 25, 13, 18, 4, 41, 40, 19, 42, 17, 47, 27, 48, 24, 43, 23, 7, 26, 8, 31, 1, 22, 20, 29, 50, 21, 38, 49] has fit: 592.
+There are 2 solutions with fit 592 .
+
+
+For the file:  medium01.txt the result is: 
+Chromosome: [4, 5, 6, 7, 1, 2, 3] has fit: 31.
+Chromosome: [3, 4, 5, 6, 7, 1, 2] has fit: 31.
+There are 2 solutions with fit 31 .
+
+
+And the shortest paths from source 1 to 5 are:
+Chromosome: [1, 6, 5] has fit: 6.
+There are 1 solutions with fit 6 .
+
