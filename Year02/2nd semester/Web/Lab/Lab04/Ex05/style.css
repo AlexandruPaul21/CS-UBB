@@ -1,0 +1,89 @@
+body {
+    margin: 3.5% 25% 3.5% 20%;
+}
+
+#slider {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 1%;
+
+}
+
+#slider ol {
+    position: relative;
+    list-style: none;
+    display: inline-flex;
+    height: 100%;
+    width: 1000px;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+
+}
+
+
+
+#slider li a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+#slider li a p {
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    height: 30px;
+}
+a p{
+    text-decoration: none;
+  }
+
+
+
+#slider ol li {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    
+}
+#slider ol li img {
+    width: 1000px;
+    height: 600px;
+    
+}
+
+#slider #prev, #slider #next {
+    width: 50px;
+    line-height: 50px;
+    font-size: 2rem;
+    text-shadow:  0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 150ms ease;
+    border-radius: 50%;
+
+}
+
+#slider #prev {
+    left: 10px;
+}
+
+#slider #next {
+    right: 10px;
+}
+
+#slider #prev:hover, #slider #next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}

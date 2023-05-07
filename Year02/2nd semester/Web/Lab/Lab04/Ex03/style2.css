@@ -1,0 +1,21 @@
+div#board
+{
+    width: 690px;
+    height: 540px;
+    padding: 24px;
+    margin: auto;
+}
+div#board > div
+{
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: solid;
+    width: 71px;
+    height: 71px;
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    font-size: 0px;
+    cursor: pointer;
+    text-align: center;
+}
