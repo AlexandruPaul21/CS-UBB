@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="com.wms.wmsproject.controller.WorkerCrudController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="CENTER" layoutX="133.0" layoutY="24.0" prefHeight="333.0" prefWidth="465.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -23,29 +23,29 @@
                   <Insets bottom="30.0" />
                </VBox.margin>
             </Label>
-            <TextField promptText="Full name">
+            <TextField promptText="Full name" fx:id="nameTextField">
                <VBox.margin>
                   <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="username">
+            <TextField promptText="username" fx:id="usernameTextField">
                <VBox.margin>
                   <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
                </VBox.margin>
             </TextField>
-            <PasswordField promptText="password">
+            <PasswordField promptText="password" fx:id="passwordTextField">
                <VBox.margin>
                   <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
                </VBox.margin>
             </PasswordField>
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="465.0">
                <children>
-                  <Button mnemonicParsing="false" text="Cancel">
+                  <Button mnemonicParsing="false" text="Cancel" onMouseClicked="#cancelButtonClicked">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Create">
+                  <Button mnemonicParsing="false" text="Submit" onMouseClicked="#submitButtonClicked">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>

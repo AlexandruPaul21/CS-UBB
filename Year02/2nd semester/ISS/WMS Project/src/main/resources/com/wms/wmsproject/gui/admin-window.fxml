@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="com.wms.wmsproject.controller.AdminController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox layoutX="112.0" layoutY="42.0" prefHeight="634.0" prefWidth="600.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,35 +21,35 @@
             </Label>
             <HBox prefHeight="281.0" prefWidth="600.0">
                <children>
-                  <TableView prefHeight="281.0" prefWidth="330.0">
+                  <TableView prefHeight="281.0" prefWidth="330.0" fx:id="workersTable">
                     <columns>
-                      <TableColumn prefWidth="134.0" text="Name" />
-                      <TableColumn prefWidth="195.0" text="Time started working" />
+                      <TableColumn prefWidth="134.0" text="Name" fx:id="nameColumn"/>
+                      <TableColumn prefWidth="195.0" text="Time started working" fx:id="startedWorkingColumn"/>
                     </columns>
                   </TableView>
                   <VBox alignment="CENTER" prefHeight="281.0" prefWidth="269.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Add worker">
+                        <Button mnemonicParsing="false" text="Add worker" onMouseClicked="#createWorkerClicked">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Update worker">
+                        <Button mnemonicParsing="false" text="Update worker" onMouseClicked="#updateWorkerClicked">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Delete worker">
+                        <Button mnemonicParsing="false" text="Delete worker" onMouseClicked="#deleteWorkerClicked">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="See all workers">
+                        <Button mnemonicParsing="false" text="See all workers" onMouseClicked="#seeAllWorkersClicked">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="See all avaliable workers">
+                        <Button mnemonicParsing="false" text="See all available workers">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
