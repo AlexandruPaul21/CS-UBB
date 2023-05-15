@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="278.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gui.LoginController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <Label text="Hello">
+      <font>
+         <Font size="63.0" />
+      </font>
+   </Label>
+
+   <VBox alignment="TOP_CENTER" layoutX="102.0" layoutY="53.0" prefHeight="166.0" prefWidth="238.0" spacing="10.0">
+      <Label fx:id="addedText" />
+      <TextField fx:id="emailText" promptText="Email" />
+      <PasswordField fx:id="passwordText" promptText="Password" />
+      <Button defaultButton="true" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="26.0" prefWidth="240.0" text="Login" />
+   </VBox>
+</VBox>

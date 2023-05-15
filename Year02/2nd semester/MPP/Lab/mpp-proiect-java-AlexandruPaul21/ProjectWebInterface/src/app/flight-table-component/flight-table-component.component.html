@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center" style="padding-top: 20px;">
+      <div class="container" style="padding-left: 0px; padding-right: 0px;">
+        <div class="row">
+          <div class="col-sm" style="text-align: left;">
+            {{ title }}
+          </div>
+        </div>
+      </div>
+      <div class="container box" style="margin-top: 10px;">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Destination</th>
+            <th>Departure date-time</th>
+            <th>Departure airport</th>
+            <th>Available seats</th>
+            <th>Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let flight of flights">
+            <td>{{ flight.destination }}</td>
+            <td>{{ flight.departureDateTime }}</td>
+            <td>{{ flight.airport }}</td>
+            <td>{{ flight.availableSeats }}</td>
+            <td>
+              <button class="btn btn-danger col-lg-6" (click)="onDeletePressed(flight.id)">Delete</button>
+              <button class="btn btn-primary col-lg-6" routerLink="/edit-flight/{{flight.id}}">Edit</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

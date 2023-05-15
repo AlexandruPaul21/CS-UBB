@@ -1,0 +1,104 @@
+15 Mar 2023 00:12:54,791 INFO  org.example.repository.BookingRepository 26 <init> - Initialised Booking repository with properties: {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+15 Mar 2023 00:12:54,795 TRACE org.example.repository.BookingRepository 82 findAll - Enter
+15 Mar 2023 00:12:54,795 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+15 Mar 2023 00:12:54,795 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+15 Mar 2023 00:12:54,795 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+15 Mar 2023 00:12:54,795 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+15 Mar 2023 00:12:54,796 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+15 Mar 2023 00:12:54,876 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+15 Mar 2023 00:12:54,888 TRACE org.example.repository.BookingRepository 128 findAll - Exit
+15 Mar 2023 00:12:54,890 TRACE org.example.repository.BookingRepository 32 findOne - Enter
+15 Mar 2023 00:12:54,891 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+15 Mar 2023 00:12:54,891 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+15 Mar 2023 00:12:54,891 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+15 Mar 2023 00:12:54,891 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+15 Mar 2023 00:12:54,891 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+15 Mar 2023 00:12:54,911 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+15 Mar 2023 00:12:54,914 TRACE org.example.repository.BookingRepository 76 findOne - Exit
+15 Mar 2023 00:12:54,918 INFO  org.example.repository.AgencyRepository 22 <init> - Initialising Agency Repository with properties: {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+15 Mar 2023 00:12:54,919 TRACE org.example.repository.AgencyRepository 57 findAll - Enter
+15 Mar 2023 00:12:54,919 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+15 Mar 2023 00:12:54,919 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+15 Mar 2023 00:12:54,919 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+15 Mar 2023 00:12:54,919 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+15 Mar 2023 00:12:54,919 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+15 Mar 2023 00:12:54,931 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+15 Mar 2023 00:12:54,932 TRACE org.example.repository.AgencyRepository 81 findAll - Exit
+15 Mar 2023 00:12:54,934 INFO  org.example.repository.ClientRepository 22 <init> - Initialising ClientRepository with properties {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+15 Mar 2023 00:12:54,935 TRACE org.example.repository.ClientRepository 59 findAll - Enter
+15 Mar 2023 00:12:54,935 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+15 Mar 2023 00:12:54,935 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+15 Mar 2023 00:12:54,935 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+15 Mar 2023 00:12:54,935 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+15 Mar 2023 00:12:54,935 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+15 Mar 2023 00:12:54,947 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+15 Mar 2023 00:12:54,948 TRACE org.example.repository.ClientRepository 87 findAll - Exit
+15 Mar 2023 00:12:54,950 INFO  org.example.repository.FlightRepository 20 <init> - Initialising FlightRepository with properties: {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+15 Mar 2023 00:12:54,950 TRACE org.example.repository.FlightRepository 60 findAll - Enter
+15 Mar 2023 00:12:54,950 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+15 Mar 2023 00:12:54,950 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+15 Mar 2023 00:12:54,950 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+15 Mar 2023 00:12:54,950 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+15 Mar 2023 00:12:54,950 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+15 Mar 2023 00:12:54,962 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+15 Mar 2023 00:12:54,963 TRACE org.example.repository.FlightRepository 90 findAll - Exit
+15 Mar 2023 00:12:54,963 TRACE org.example.repository.FlightRepository 26 findOne - Enter
+15 Mar 2023 00:12:54,963 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+15 Mar 2023 00:12:54,964 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+15 Mar 2023 00:12:54,964 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+15 Mar 2023 00:12:54,964 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+15 Mar 2023 00:12:54,964 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+15 Mar 2023 00:12:54,989 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+15 Mar 2023 00:12:54,990 TRACE org.example.repository.FlightRepository 54 findOne - Exit
+20 Mar 2023 12:26:47,317 INFO  org.example.repository.BookingRepository 26 <init> - Initialised Booking repository with properties: {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+20 Mar 2023 12:26:47,321 TRACE org.example.repository.BookingRepository 82 findAll - Enter
+20 Mar 2023 12:26:47,321 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+20 Mar 2023 12:26:47,321 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+20 Mar 2023 12:26:47,322 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+20 Mar 2023 12:26:47,322 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+20 Mar 2023 12:26:47,322 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+20 Mar 2023 12:26:47,445 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+20 Mar 2023 12:26:47,469 TRACE org.example.repository.BookingRepository 128 findAll - Exit
+20 Mar 2023 12:26:47,472 TRACE org.example.repository.BookingRepository 32 findOne - Enter
+20 Mar 2023 12:26:47,472 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+20 Mar 2023 12:26:47,472 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+20 Mar 2023 12:26:47,472 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+20 Mar 2023 12:26:47,472 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+20 Mar 2023 12:26:47,472 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+20 Mar 2023 12:26:47,495 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+20 Mar 2023 12:26:47,500 TRACE org.example.repository.BookingRepository 76 findOne - Exit
+20 Mar 2023 12:26:47,505 INFO  org.example.repository.AgencyRepository 22 <init> - Initialising Agency Repository with properties: {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+20 Mar 2023 12:26:47,505 TRACE org.example.repository.AgencyRepository 57 findAll - Enter
+20 Mar 2023 12:26:47,505 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+20 Mar 2023 12:26:47,505 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+20 Mar 2023 12:26:47,505 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+20 Mar 2023 12:26:47,505 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+20 Mar 2023 12:26:47,506 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+20 Mar 2023 12:26:47,519 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+20 Mar 2023 12:26:47,521 TRACE org.example.repository.AgencyRepository 81 findAll - Exit
+20 Mar 2023 12:26:47,522 INFO  org.example.repository.ClientRepository 22 <init> - Initialising ClientRepository with properties {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+20 Mar 2023 12:26:47,523 TRACE org.example.repository.ClientRepository 59 findAll - Enter
+20 Mar 2023 12:26:47,523 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+20 Mar 2023 12:26:47,523 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+20 Mar 2023 12:26:47,523 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+20 Mar 2023 12:26:47,523 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+20 Mar 2023 12:26:47,523 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+20 Mar 2023 12:26:47,538 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+20 Mar 2023 12:26:47,539 TRACE org.example.repository.ClientRepository 87 findAll - Exit
+20 Mar 2023 12:26:47,541 INFO  org.example.repository.FlightRepository 20 <init> - Initialising FlightRepository with properties: {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+20 Mar 2023 12:26:47,541 TRACE org.example.repository.FlightRepository 60 findAll - Enter
+20 Mar 2023 12:26:47,541 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+20 Mar 2023 12:26:47,541 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+20 Mar 2023 12:26:47,541 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+20 Mar 2023 12:26:47,542 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+20 Mar 2023 12:26:47,542 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+20 Mar 2023 12:26:47,554 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+20 Mar 2023 12:26:47,555 TRACE org.example.repository.FlightRepository 90 findAll - Exit
+20 Mar 2023 12:26:47,556 TRACE org.example.repository.FlightRepository 26 findOne - Enter
+20 Mar 2023 12:26:47,556 TRACE org.example.utils.JdbcUtils 48 getConnection - Enter
+20 Mar 2023 12:26:47,556 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+20 Mar 2023 12:26:47,556 INFO  org.example.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+20 Mar 2023 12:26:47,556 INFO  org.example.utils.JdbcUtils 30 getNewConnection - Username...postgres
+20 Mar 2023 12:26:47,556 INFO  org.example.utils.JdbcUtils 31 getNewConnection - Password...1234
+20 Mar 2023 12:26:47,569 TRACE org.example.utils.JdbcUtils 57 getConnection - Exit
+20 Mar 2023 12:26:47,571 TRACE org.example.repository.FlightRepository 54 findOne - Exit

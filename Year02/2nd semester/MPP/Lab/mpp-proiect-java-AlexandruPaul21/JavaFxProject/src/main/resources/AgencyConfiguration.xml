@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="jdbcProps" location="classpath:bd.properties"/>
+
+    <bean id="requestAgencyRepository" class="com.example.javafxproject.repository.AgencyRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="requestBookingRepository" class="com.example.javafxproject.repository.BookingRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="requestClientRepository" class="com.example.javafxproject.repository.ClientRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="requestFlightRepository" class="com.example.javafxproject.repository.FlightRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="requestService" class="com.example.javafxproject.service.Service">
+        <constructor-arg ref="requestAgencyRepository"/>
+        <constructor-arg ref="requestBookingRepository"/>
+        <constructor-arg ref="requestClientRepository"/>
+        <constructor-arg ref="requestFlightRepository"/>
+    </bean>
+
+</beans>

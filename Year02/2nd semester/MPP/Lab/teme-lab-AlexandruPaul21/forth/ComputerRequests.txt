@@ -1,0 +1,30 @@
+34
+1;Popescu David;Cluj, Str Noua, nr. 12; 0722222222;Macbook pro;30-12-2019; Display damage;New
+2;Davidescu Maria;Cluj, Str Veche, nr. 14; 07299999;HP n45;30-09-2020; Harddisk failure;Finished
+3;Owner 1;Address 1;Phone 1;Model 1;07-11-2020;Problem 1;New
+4;Owner 2;Address 2;Phone 2;Model 2;12-10-2020;Problem 2;New
+5;Owner 2;Address 2;Phone 2;Model 2;03-10-2020;Problem 2;Finished
+6;Owner 2;Address 2;Phone 2;Model 2;12-10-2020;Problem 2;Cancelled
+7;Owner 2;Address 2;Phone 2;Model 2;12-10-2020;Problem 2;Cancelled
+8;Popescu Marin;Nasaud, 22;0723456;MacBookPro;04-12-2020;Keyboard damage;New
+9;aaa;aa;aa;aa;04-12-2020;aaa;New
+10;Test A;Stree A, number 2;0838383;Asus;04-12-2020;Not starting;New
+11;Test A;Street A, no 5;03344456;Asus;04-12-2020;Not starting;New
+12;wer;asdfg;023882;HP n23;04-12-2020;Not showing all colors;Finished
+13;Test B;Street B, ap. 89;099999999;Lenovo;02-12-2020;Not starting;Finished
+14;Name A;Street tu, no. 45;0728292;IBM ThinkPad;06-12-2020;Not starting;Finished
+15;aaaaa;aaaa;222222;adv;06-12-2020;sas asa sasa assa;Finished
+17;sas;sasa;33455;asss;06-12-2020;r r r ;Finished
+18;ssss;ssnsada;0838343;HP n34;07-12-2020;Not starting;Finished
+19;sss;as;3333;fgh;07-12-2020;saS;New
+21;Popescu Vasile;Street A;034342423;Asus 345;07-12-2020;Test A;Finished
+22;sasa;sasa;032443;lenovo;07-12-2020;ddddd;New
+23;sas;SAA;234;Asus;10-12-2020;Display damage;New
+24;eeee;street b;03288238423;Lenovo nr56;10-12-2020;Not starting;Finished
+26;das;dsd;445;dasd;10-12-2020;dasd fsdfs  dsada  ;New
+27;www;asdasda;0824832432;Asus;12-12-2020;Not starting;Finished
+28;aaa;aa;0382382;eee;14-12-2020;fwefdsf;New
+30;ww;saa;032;sas;14-12-2020;saS SAs sa SA sa;New
+31;ww;saa;032;sas;14-12-2020;axDADASDASDAS;New
+32;aaaaa;aaa;aaa;aaa;13-03-2021;zx`x`;Finished
+33;asasasad;sasas;sasa;fdfd;13-03-2021;dsd;Finished

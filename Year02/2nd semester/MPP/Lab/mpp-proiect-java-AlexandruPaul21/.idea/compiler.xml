@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="JavaRest" target="17" />
+      <module name="JavaRest.main" target="17" />
+      <module name="JavaRest.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

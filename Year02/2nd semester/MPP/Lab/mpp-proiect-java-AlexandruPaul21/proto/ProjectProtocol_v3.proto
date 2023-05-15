@@ -1,0 +1,73 @@
+syntax = "proto3";
+package org.example;
+
+import "google/protobuf/timestamp.proto";
+
+option java_package = "org.example.protobuf";
+option java_outer_classname = "ProjectProto";
+
+message Agency {
+  string username = 1;
+  string name = 2;
+  string password = 3;
+}
+
+message Client {
+  int64 id = 1;
+  string name = 2;
+  string address = 3;
+}
+
+message Flight {
+  int64 id = 1;
+  string destination = 2;
+  google.protobuf.Timestamp departure = 4;
+  string airport = 5;
+  int32 availableSeats = 6;
+}
+
+message Booking {
+  int64 id = 1;
+  Client client = 2;
+  Flight flight = 3;
+  repeated string passengers = 4;
+}
+
+message ProjectRequest {
+  enum Type {
+    Unknown = 0;
+    Login = 1;
+    Logout = 2;
+    GetAllFlights = 3;
+    GetFilteredFlights = 4;
+    GetNumberOfSeats = 5;
+    BookTicket = 6;
+  }
+
+  Type type = 1;
+
+  oneof payload {
+    Agency agency = 2;
+    Flight flight = 3;
+    Booking booking = 4;
+  }
+}
+
+message ProjectResponse {
+  enum Type {
+    Unknown = 0;
+    Ok = 1;
+    Error = 2;
+    Flights = 3;
+    FilteredFlights = 4;
+    NumberOfSeats = 5;
+    Booking = 6;
+  }
+
+  Type type = 1;
+
+  string error = 2;
+  repeated Flight flights = 3;
+  Flight flight = 4;
+  int32 number = 5;
+}

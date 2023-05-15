@@ -1,0 +1,38 @@
+22 Mar 2023 13:54:54,897 INFO  com.example.javafxproject.repository.AgencyRepository 22 <init> - Initialising Agency Repository with properties: {}
+22 Mar 2023 13:54:54,898 TRACE com.example.javafxproject.repository.AgencyRepository 57 findAll - Enter
+22 Mar 2023 13:54:54,898 TRACE com.example.javafxproject.utils.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 13:54:54,899 TRACE com.example.javafxproject.utils.JdbcUtils 23 getNewConnection - Enter
+22 Mar 2023 13:54:54,899 INFO  com.example.javafxproject.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...null
+22 Mar 2023 13:54:54,899 INFO  com.example.javafxproject.utils.JdbcUtils 30 getNewConnection - Username...null
+22 Mar 2023 13:54:54,899 INFO  com.example.javafxproject.utils.JdbcUtils 31 getNewConnection - Password...null
+22 Mar 2023 13:54:54,900 ERROR com.example.javafxproject.utils.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 13:54:54,901 TRACE com.example.javafxproject.utils.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 13:55:12,871 INFO  com.example.javafxproject.repository.AgencyRepository 22 <init> - Initialising Agency Repository with properties: {}
+22 Mar 2023 13:55:12,873 TRACE com.example.javafxproject.repository.AgencyRepository 57 findAll - Enter
+22 Mar 2023 13:55:12,873 TRACE com.example.javafxproject.utils.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 13:55:12,873 TRACE com.example.javafxproject.utils.JdbcUtils 23 getNewConnection - Enter
+22 Mar 2023 13:55:12,874 INFO  com.example.javafxproject.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...null
+22 Mar 2023 13:55:12,874 INFO  com.example.javafxproject.utils.JdbcUtils 30 getNewConnection - Username...null
+22 Mar 2023 13:55:12,874 INFO  com.example.javafxproject.utils.JdbcUtils 31 getNewConnection - Password...null
+22 Mar 2023 13:55:12,875 ERROR com.example.javafxproject.utils.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 13:55:12,875 TRACE com.example.javafxproject.utils.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 13:57:31,174 INFO  com.example.javafxproject.repository.AgencyRepository 22 <init> - Initialising Agency Repository with properties: {}
+22 Mar 2023 13:57:31,176 TRACE com.example.javafxproject.repository.AgencyRepository 57 findAll - Enter
+22 Mar 2023 13:57:31,176 TRACE com.example.javafxproject.utils.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 13:57:31,176 TRACE com.example.javafxproject.utils.JdbcUtils 23 getNewConnection - Enter
+22 Mar 2023 13:57:31,176 INFO  com.example.javafxproject.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...null
+22 Mar 2023 13:57:31,176 INFO  com.example.javafxproject.utils.JdbcUtils 30 getNewConnection - Username...null
+22 Mar 2023 13:57:31,176 INFO  com.example.javafxproject.utils.JdbcUtils 31 getNewConnection - Password...null
+22 Mar 2023 13:57:31,177 ERROR com.example.javafxproject.utils.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 13:57:31,177 TRACE com.example.javafxproject.utils.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 13:57:51,877 INFO  com.example.javafxproject.repository.AgencyRepository 22 <init> - Initialising Agency Repository with properties: {}
+22 Mar 2023 13:59:25,968 INFO  com.example.javafxproject.repository.AgencyRepository 22 <init> - Initialising Agency Repository with properties: {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+22 Mar 2023 13:59:58,295 INFO  com.example.javafxproject.repository.AgencyRepository 22 <init> - Initialising Agency Repository with properties: {sql.url=jdbc:postgresql://localhost:5432/MPP, sql.username=postgres, sql.password=1234}
+22 Mar 2023 13:59:58,297 TRACE com.example.javafxproject.repository.AgencyRepository 57 findAll - Enter
+22 Mar 2023 13:59:58,297 TRACE com.example.javafxproject.utils.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 13:59:58,297 TRACE com.example.javafxproject.utils.JdbcUtils 23 getNewConnection - Enter
+22 Mar 2023 13:59:58,297 INFO  com.example.javafxproject.utils.JdbcUtils 29 getNewConnection - Trying to connect to url...jdbc:postgresql://localhost:5432/MPP
+22 Mar 2023 13:59:58,298 INFO  com.example.javafxproject.utils.JdbcUtils 30 getNewConnection - Username...postgres
+22 Mar 2023 13:59:58,298 INFO  com.example.javafxproject.utils.JdbcUtils 31 getNewConnection - Password...1234
+22 Mar 2023 13:59:58,503 TRACE com.example.javafxproject.utils.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 13:59:58,531 TRACE com.example.javafxproject.repository.AgencyRepository 81 findAll - Exit

@@ -1,0 +1,43 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <input type="text" [(ngModel)]="flight.destination" [ngModelOptions]="{standalone: true}"
+               class="form-control"
+               id="destination"
+               name="destination"
+               placeholder="Enter destination"
+               required>
+
+        <label for="datetime">Date and Time</label>
+        <input type="datetime-local" [(ngModel)]="flight.departureDateTime" [ngModelOptions]="{standalone: true}"
+               class="form-control"
+               id="datetime"
+               name="datetime"
+               placeholder="Enter departure date time"
+               required>
+
+        <label for="airport">Airport</label>
+        <input type="text" [(ngModel)]="flight.airport" [ngModelOptions]="{standalone: true}"
+          class="form-control"
+                id="airport"
+                name="airport"
+                placeholder="Enter airport"
+                required>
+
+        <label for="seats">Available Seats</label>
+        <input type="text" [(ngModel)]="flight.availableSeats" [ngModelOptions]="{standalone: true}"
+          class="form-control"
+                id="seats"
+                name="seats"
+                placeholder="Enter available seats"
+                required>
+
+      </div>
+
+      <button type="submit"
+              class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

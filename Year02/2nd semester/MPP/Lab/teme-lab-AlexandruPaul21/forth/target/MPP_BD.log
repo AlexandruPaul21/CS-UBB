@@ -1,0 +1,50 @@
+13 Mar 2023 13:44:13,216 INFO  org.example.CarsDBRepository 18 <init> - Initializing CarsDBRepository with properties: {jdbc.url=jdbc:sqlite:/Users/alexandrusirbu/teme-lab-AlexandruPaul21/TestMPP2023.db} 
+13 Mar 2023 13:44:13,218 TRACE org.example.JdbcUtils 48 getConnection - Enter
+13 Mar 2023 13:44:13,219 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+13 Mar 2023 13:44:13,219 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:/Users/alexandrusirbu/teme-lab-AlexandruPaul21/TestMPP2023.db
+13 Mar 2023 13:44:13,219 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+13 Mar 2023 13:44:13,219 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+13 Mar 2023 13:44:13,504 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@55a147cc)
+13 Mar 2023 13:44:13,513 TRACE org.example.JdbcUtils 48 getConnection - Enter
+13 Mar 2023 13:44:13,513 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+13 Mar 2023 13:44:13,513 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:/Users/alexandrusirbu/teme-lab-AlexandruPaul21/TestMPP2023.db
+13 Mar 2023 13:44:13,514 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+13 Mar 2023 13:44:13,514 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+13 Mar 2023 13:44:13,514 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2e8c1c9b)
+13 Mar 2023 13:46:12,326 INFO  org.example.CarsDBRepository 18 <init> - Initializing CarsDBRepository with properties: {} 
+13 Mar 2023 13:46:12,330 TRACE org.example.JdbcUtils 48 getConnection - Enter
+13 Mar 2023 13:46:12,330 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+13 Mar 2023 13:46:12,330 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+13 Mar 2023 13:46:12,330 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+13 Mar 2023 13:46:12,330 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+13 Mar 2023 13:46:12,331 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+13 Mar 2023 13:46:12,332 TRACE org.example.JdbcUtils 57 getConnection - Exit
+13 Mar 2023 13:46:37,654 INFO  org.example.CarsDBRepository 18 <init> - Initializing CarsDBRepository with properties: {} 
+13 Mar 2023 13:46:37,658 TRACE org.example.JdbcUtils 48 getConnection - Enter
+13 Mar 2023 13:46:37,658 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+13 Mar 2023 13:46:37,659 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+13 Mar 2023 13:46:37,659 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+13 Mar 2023 13:46:37,659 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+13 Mar 2023 13:46:37,660 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+13 Mar 2023 13:46:37,660 TRACE org.example.JdbcUtils 57 getConnection - Exit
+13 Mar 2023 13:47:17,276 INFO  org.example.CarsDBRepository 18 <init> - Initializing CarsDBRepository with properties: {} 
+13 Mar 2023 13:47:17,280 TRACE org.example.JdbcUtils 48 getConnection - Enter
+13 Mar 2023 13:47:17,281 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+13 Mar 2023 13:47:17,281 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+13 Mar 2023 13:47:17,281 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+13 Mar 2023 13:47:17,281 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+13 Mar 2023 13:47:17,282 ERROR org.example.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+13 Mar 2023 13:47:17,283 TRACE org.example.JdbcUtils 57 getConnection - Exit
+13 Mar 2023 13:47:35,134 INFO  org.example.CarsDBRepository 18 <init> - Initializing CarsDBRepository with properties: {jdbc.url=jdbc:sqlite:/Users/alexandrusirbu/teme-lab-AlexandruPaul21/TestMPP2023.db} 
+13 Mar 2023 13:47:35,136 TRACE org.example.JdbcUtils 48 getConnection - Enter
+13 Mar 2023 13:47:35,136 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+13 Mar 2023 13:47:35,136 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:/Users/alexandrusirbu/teme-lab-AlexandruPaul21/TestMPP2023.db
+13 Mar 2023 13:47:35,136 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+13 Mar 2023 13:47:35,137 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+13 Mar 2023 13:47:35,592 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3c77d488)
+13 Mar 2023 13:47:35,604 TRACE org.example.JdbcUtils 48 getConnection - Enter
+13 Mar 2023 13:47:35,604 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+13 Mar 2023 13:47:35,604 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:/Users/alexandrusirbu/teme-lab-AlexandruPaul21/TestMPP2023.db
+13 Mar 2023 13:47:35,605 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+13 Mar 2023 13:47:35,605 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+13 Mar 2023 13:47:35,606 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1530c739)
