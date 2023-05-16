@@ -19,12 +19,12 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TableView prefHeight="269.0" prefWidth="600.0">
+            <TableView fx:id="tasksTable" prefHeight="269.0" prefWidth="600.0">
                <columns>
-                  <TableColumn prefWidth="75.0" text="Title" />
-                  <TableColumn prefWidth="318.0" text="Description" />
-                  <TableColumn prefWidth="102.0" text="Type" />
-                  <TableColumn prefWidth="104.0" text="Deadline" />
+                  <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Title" />
+                  <TableColumn fx:id="descriptionColumn" prefWidth="318.0" text="Description" />
+                  <TableColumn fx:id="typeColumn" prefWidth="102.0" text="Type" />
+                  <TableColumn fx:id="deadlineColumn" prefWidth="104.0" text="Deadline" />
                </columns>
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -32,7 +32,7 @@
             </TableView>
             <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0">
                <children>
-                  <Button mnemonicParsing="false" text="Mark task as solved">
+                  <Button mnemonicParsing="false" text="Mark task as solved" onMouseClicked="#markAsSolvedClicked">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -41,7 +41,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="600.0">
                <children>
-                  <Button mnemonicParsing="false" text="Logout">
+                  <Button mnemonicParsing="false" text="Logout" onMouseClicked="#logoutClicked">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>

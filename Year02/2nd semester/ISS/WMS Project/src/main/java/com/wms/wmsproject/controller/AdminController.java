@@ -5,8 +5,6 @@ import com.wms.wmsproject.model.Worker;
 import com.wms.wmsproject.model.dtos.WorkerDto;
 import com.wms.wmsproject.service.Service;
 import com.wms.wmsproject.utils.functions.Functions;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
@@ -26,12 +24,7 @@ public class AdminController implements Controller {
         this.service = service;
         initializeWorkersTable();
         populateWorkersTable();
-        (workersTable.getScene().getWindow()).focusedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                populateWorkersTable();
-            }
-        });
+        (workersTable.getScene().getWindow()).focusedProperty().addListener((observable, oldValue, newValue) -> populateWorkersTable());
     }
 
     private void populateWorkersTable() {

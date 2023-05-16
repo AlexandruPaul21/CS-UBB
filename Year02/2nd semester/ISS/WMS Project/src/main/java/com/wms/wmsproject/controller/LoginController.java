@@ -1,14 +1,19 @@
 package com.wms.wmsproject.controller;
 
 import com.wms.wmsproject.model.Admin;
+import com.wms.wmsproject.model.Worker;
 import com.wms.wmsproject.utils.enums.LoginResponseType;
 import com.wms.wmsproject.utils.functions.Functions;
 import com.wms.wmsproject.service.Service;
 import com.wms.wmsproject.utils.responses.LoginResponse;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 
@@ -38,7 +43,12 @@ public class LoginController implements Controller {
             closeWindow();
         } else if (loginResponse.getType() == LoginResponseType.WORKER) {
             Stage stage = new Stage();
-            Functions.fxmlLoad(stage, "/com/wms/wmsproject/gui/worker-window.fxml");
+            Controller ctrl = Functions.fxmlLoad(stage, "/com/wms/wmsproject/gui/worker-window.fxml");
+            Worker worker = (Worker) loginResponse.getBody();
+            ((WorkerController) ctrl).setService(service);
+            ((WorkerController) ctrl).setLoggedWorker(worker);
+            service.startWorking(worker.getId());
+            stage.onCloseRequestProperty().setValue(event -> service.stopWorking(worker.getId()));
             closeWindow();
         }
     }

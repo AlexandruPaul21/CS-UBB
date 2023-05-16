@@ -1,13 +1,17 @@
 package com.wms.wmsproject.service;
 
+import com.wms.wmsproject.model.Task;
+import com.wms.wmsproject.repository.TaskRepository;
 import com.wms.wmsproject.utils.enums.LoginResponseType;
 import com.wms.wmsproject.utils.responses.LoginResponse;
 import com.wms.wmsproject.model.Admin;
 import com.wms.wmsproject.model.Worker;
 import com.wms.wmsproject.repository.AdminRepository;
 import com.wms.wmsproject.repository.WorkerRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Arrays;
 import java.util.List;
 
 @org.springframework.stereotype.Service
@@ -16,6 +20,12 @@ public class Service {
 
     private AdminRepository adminRepository;
     private WorkerRepository workerRepository;
+    private TaskRepository taskRepository;
+
+    @Autowired
+    public void setTaskRepository(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
 
     @Autowired
     public void setAdminRepository(AdminRepository adminRepository) {
@@ -44,6 +54,25 @@ public class Service {
         return response;
     }
 
+    @Transactional
+    public void startWorking(String id) {
+        workerRepository.startWorking(id);
+    }
+
+    @Transactional
+    public void stopWorking(String id) {
+        workerRepository.stopWorking(id);
+    }
+
+    @Transactional
+    public void markAsDone(Long id) {
+        taskRepository.markAsDone(id);
+    }
+
+    public List<Worker> getAllAvailableWorkers() {
+        return workerRepository.findAllAvailableWorkers();
+    }
+
     public Worker addWorker(Worker worker) {
         return workerRepository.save(worker);
     }
@@ -58,5 +87,9 @@ public class Service {
 
     public void updateWorker(Worker worker) {
         workerRepository.save(worker);
+    }
+
+    public List<Task> getTasksForWorker(String id) {
+        return taskRepository.findAllByWorkerId(id);
     }
 }
