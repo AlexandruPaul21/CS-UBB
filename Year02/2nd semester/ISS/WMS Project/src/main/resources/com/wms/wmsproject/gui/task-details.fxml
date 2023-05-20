@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wms.wmsproject.controller.TaskCrudController">
    <children>
       <VBox alignment="CENTER" layoutX="126.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0">
          <children>
-            <Label text="Task detalies">
+            <Label text="Task details">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
-            <TextField promptText="Task title">
+            <TextField promptText="Task title" fx:id="taskTitleTextEdit">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </TextField>
-            <TextArea prefHeight="128.0" prefWidth="450.0" promptText="Description">
+            <TextArea prefHeight="128.0" prefWidth="450.0" promptText="Description" fx:id="descriptionTextArea">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </TextArea>
             <HBox alignment="CENTER" prefHeight="43.0" prefWidth="450.0">
                <children>
-                  <DatePicker promptText="Deadline">
+                  <DatePicker promptText="Deadline" fx:id="deadlineDatePicker">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </DatePicker>
-                  <ComboBox prefWidth="150.0" promptText="Task Type">
+                  <ComboBox prefWidth="150.0" promptText="Task Type" fx:id="taskTypeComboBox">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </ComboBox>
                </children>
             </HBox>
+            <Button mnemonicParsing="false" text="Create" onMouseClicked="#createTaskClicked">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
    </children>

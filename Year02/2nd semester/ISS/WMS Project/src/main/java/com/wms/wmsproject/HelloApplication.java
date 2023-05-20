@@ -1,6 +1,7 @@
 package com.wms.wmsproject;
 
 import com.wms.wmsproject.controller.LoginController;
+import com.wms.wmsproject.controller.StartController;
 import com.wms.wmsproject.service.Service;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -32,9 +33,9 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/wms/wmsproject/gui/login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/wms/wmsproject/gui/start-window.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        LoginController controller = fxmlLoader.getController();
+        StartController controller = fxmlLoader.getController();
         controller.setService(applicationContext.getBean(Service.class));
         stage.setTitle("Hello!");
         stage.setScene(scene);

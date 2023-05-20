@@ -49,7 +49,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="See all available workers">
+                        <Button mnemonicParsing="false" text="See all available workers" onMouseClicked="#seeAllAvailableWorkersClicked">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
@@ -58,7 +58,7 @@
                   </VBox>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" text="Assign task">
+            <Button mnemonicParsing="false" text="Assign task" onMouseClicked="#assignTaskClicked">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
@@ -70,23 +70,23 @@
             </Label>
             <HBox prefHeight="206.0" prefWidth="600.0">
                <children>
-                  <TableView prefHeight="195.0" prefWidth="335.0">
+                  <TableView prefHeight="195.0" prefWidth="335.0" fx:id="taskTable">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="Task" />
-                      <TableColumn prefWidth="153.0" text="Assigned to" />
-                        <TableColumn prefWidth="106.0" text="Deadline" />
+                      <TableColumn prefWidth="75.0" text="Task" fx:id="taskColumn"/>
+                      <TableColumn prefWidth="153.0" text="Assigned to" fx:id="workerColumn"/>
+                        <TableColumn prefWidth="106.0" text="Deadline" fx:id="deadlineColumn"/>
                     </columns>
                   </TableView>
                   <VBox alignment="CENTER" prefHeight="195.0" prefWidth="265.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Delete task" />
+                        <Button mnemonicParsing="false" text="Delete task" onMouseClicked="#deleteTasksClicked"/>
                      </children>
                   </VBox>
                </children>
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="49.0" prefWidth="600.0">
                <children>
-                  <Button mnemonicParsing="false" text="Logout">
+                  <Button mnemonicParsing="false" text="Logout" onMouseClicked="#logoutButtonClicked">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>

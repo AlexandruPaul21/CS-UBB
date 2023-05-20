@@ -19,6 +19,14 @@ public class Task extends Identifiable<Long> {
     @JoinColumn(name = "worker_id")
     private Worker worker;
 
+    public Worker getWorker() {
+        return worker;
+    }
+
+    public void setWorker(Worker worker) {
+        this.worker = worker;
+    }
+
     public Task() {}
 
     public Task(Long id, String name, String description, LocalDateTime deadline, TaskType taskType) {

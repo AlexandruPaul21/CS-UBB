@@ -18,6 +18,7 @@ public class WorkerCrudController implements Controller {
 
     public void setService(Service service) {
         this.service = service;
+        service.addObserver(this);
         if (selectedWorker != null) {
             nameTextField.setText(selectedWorker.getName());
             usernameTextField.setText(selectedWorker.getId());
@@ -25,6 +26,9 @@ public class WorkerCrudController implements Controller {
             passwordTextField.setText(selectedWorker.getPassword());
         }
     }
+
+    @Override
+    public void update() {}
 
     public TextField nameTextField;
     public TextField usernameTextField;
@@ -75,6 +79,7 @@ public class WorkerCrudController implements Controller {
             alert.setTitle("Success");
             alert.setHeaderText("Worker added successfully");
             alert.show();
+            service.removeObserver(this);
             Stage stage = (Stage) nameTextField.getScene().getWindow();
             stage.close();
         } else {

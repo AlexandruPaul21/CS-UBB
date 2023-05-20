@@ -2,19 +2,37 @@ package com.wms.wmsproject.model.dtos;
 
 import com.wms.wmsproject.model.Task;
 
-import java.time.LocalDateTime;
-
 public class TaskDto {
     private Long id;
     private String name;
     private String description;
     private String deadline;
+    private String type;
+    private String worker;
 
     public TaskDto(Task task) {
         this.id = task.getId();
         this.name = task.getName();
         this.description = task.getDescription();
+        this.type = task.getTaskType().toString();
         this.deadline = task.getDeadline().toString();
+        this.worker = task.getWorker().getName();
+    }
+
+    public String getWorker() {
+        return worker;
+    }
+
+    public void setWorker(String worker) {
+        this.worker = worker;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public Long getId() {

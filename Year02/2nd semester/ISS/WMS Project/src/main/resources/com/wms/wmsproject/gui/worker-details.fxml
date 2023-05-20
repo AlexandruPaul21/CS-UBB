@@ -15,7 +15,7 @@
    <children>
       <VBox alignment="CENTER" layoutX="133.0" layoutY="24.0" prefHeight="333.0" prefWidth="465.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label text="Worker detalies">
+            <Label text="Worker details">
                <font>
                   <Font size="36.0" />
                </font>

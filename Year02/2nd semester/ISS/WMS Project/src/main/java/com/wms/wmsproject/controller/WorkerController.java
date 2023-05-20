@@ -22,8 +22,14 @@ public class WorkerController implements Controller {
     private Worker loggedWorker;
     private Service service;
 
+    @Override
+    public void update() {
+        populateTasksTable();
+    }
+
     public void setService(Service service) {
         this.service = service;
+        service.addObserver(this);
         initializeTasksTable();
     }
 
@@ -37,7 +43,7 @@ public class WorkerController implements Controller {
 
     private void initializeTasksTable() {
         tasksTable.setItems(tasks);
-        titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        titleColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         deadlineColumn.setCellValueFactory(new PropertyValueFactory<>("deadline"));
@@ -49,7 +55,9 @@ public class WorkerController implements Controller {
     }
 
     public void logoutClicked() {
+        service.removeObserver(this);
         service.stopWorking(loggedWorker.getId());
+        tasksTable.getScene().getWindow().hide();
     }
 
     public void markAsSolvedClicked() {
@@ -62,5 +70,6 @@ public class WorkerController implements Controller {
             return;
         }
         service.markAsDone(selectedTask.getId());
+        populateTasksTable();
     }
 }
