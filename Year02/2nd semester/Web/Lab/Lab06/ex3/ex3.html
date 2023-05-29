@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>People</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <label for="selectId">ID-uri dispoibile:</label>
+    <select id="selectId" name="selectID" onchange="getPersonJq()">
+        <option value="">Select an option</option>
+    </select>
+    <br><br>
+    <form>
+        <label for="inputName">Nume</label>
+        <input type="text" id="inputName"><br>
+        <label for="inputSurname">Prenume</label>
+        <input type="text" id="inputSurname"><br>
+        <label for="inputTelephone">Telefon</label>
+        <input type="text" id="inputTelephone"><br>
+        <label for="inputEmail">Email</label>
+        <input type="text" id="inputEmail"><br>
+        <button id="saveButton" disabled onclick="savePersonJq()">Save</button>
+    </form>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

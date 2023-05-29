@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>X-0 Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>X-0 Game</h1>
+<table id="game-table">
+    <tr>
+        <td class="cell" id="0" onclick="makePlayerMove(this)"></td>
+        <td class="cell" id="1" onclick="makePlayerMove(this)"></td>
+        <td class="cell" id="2" onclick="makePlayerMove(this)"></td>
+    </tr>
+    <tr>
+        <td class="cell" id="3" onclick="makePlayerMove(this)"></td>
+        <td class="cell" id="4" onclick="makePlayerMove(this)"></td>
+        <td class="cell" id="5" onclick="makePlayerMove(this)"></td>
+    </tr>
+    <tr>
+        <td class="cell" id="6" onclick="makePlayerMove(this)"></td>
+        <td class="cell" id="7" onclick="makePlayerMove(this)"></td>
+        <td class="cell" id="8" onclick="makePlayerMove(this)"></td>
+    </tr>
+</table>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        width: 7em;
+        height: 4em;
+    }
+</style>
+</html>

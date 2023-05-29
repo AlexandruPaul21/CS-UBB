@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <title>Products configuration</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Configuration for the number of products per page</h2>
+    <form action="fetch_products.php" method="get">
+        <label for="noProducts">Number of products/page:</label>
+        <select name="noProducts" id="noProducts">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+        </select>
+        <br>
+        <input type="submit" value="Apply">
+    </form>
+</body>
+</html>
