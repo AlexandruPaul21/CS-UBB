@@ -1,0 +1,6 @@
+USE Airlines226
+GO
+
+CREATE NONCLUSTERED INDEX NX_Pilots_name ON Pilots(nameP)
+
+SELECT * FROM Pilots ORDER BY nameP

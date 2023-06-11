@@ -1,0 +1,40 @@
+USE Airlines226
+
+CREATE PROCEDURE dirty_read_t1 AS
+BEGIN 
+	BEGIN TRY
+		BEGIN TRAN
+		UPDATE Flights SET price = 10 WHERE id_flight = 1
+		INSERT INTO log_table VALUES ('UPDATE', 'Flights', CURRENT_TIMESTAMP)
+		WAITFOR DELAY '00:00:05'
+		ROLLBACK TRAN
+		PRINT 'Transaction rollbacked - good'
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRAN
+		PRINT 'Transaction failed'
+	END CATCH
+END
+
+CREATE PROCEDURE dirty_reads_t2 AS
+BEGIN
+	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED --solve with read commited
+	BEGIN TRY
+		BEGIN TRAN
+		SELECT * FROM Flights
+		INSERT INTO log_table VALUES('SELECT', 'Flights', CURRENT_TIMESTAMP)
+		WAITFOR DELAY '00:00:10'
+		SELECT * FROM Flights
+		INSERT INTO log_table VALUES('SELECT', 'Flights', CURRENT_TIMESTAMP)
+
+		COMMIT TRAN
+		PRINT 'Transaction commited'
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRAN
+		PRINT 'Error'
+	END CATCH
+END
+
+EXEC dirty_read_t1
+EXEC dirty_reads_t2

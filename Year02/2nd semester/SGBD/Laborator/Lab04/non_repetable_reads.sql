@@ -1,0 +1,42 @@
+USE Airlines226
+
+CREATE PROCEDURE nr_reads_t1 AS
+BEGIN
+	BEGIN TRY
+		BEGIN TRAN
+		SELECT * FROM Flights
+		INSERT INTO log_table VALUES('SELECT', 'Flight', CURRENT_TIMESTAMP)
+		WAITFOR DELAY '00:00:10'
+		SELECT * FROM Flights
+		INSERT INTO log_table VALUES('SELECT', 'Flight', CURRENT_TIMESTAMP)
+		COMMIT TRAN
+
+		PRINT 'Transaction commited'
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRAN
+		PRINT 'Transaction rollbacked'
+	END CATCH
+END
+
+CREATE PROCEDURE nr_reads_t2 AS
+BEGIN
+	-- SET TRANSACTION ISOLATION LEVEL REPEATABLE READ
+	BEGIN TRY
+		BEGIN TRAN
+		WAITFOR DELAY '00:00:02'
+		UPDATE Flights SET price = 100 WHERE id_flight = 1
+		INSERT INTO log_table VALUES ('UPDATE', 'Flights', CURRENT_TIMESTAMP)
+		COMMIT TRAN
+
+		PRINT 'Transaction commited'
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRAN
+
+		PRINT 'Transaction rollbacked'
+	END CATCH
+END
+
+EXEC nr_reads_t1
+EXEC nr_reads_t2
