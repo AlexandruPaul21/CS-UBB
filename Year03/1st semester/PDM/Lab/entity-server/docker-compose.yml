@@ -1,0 +1,15 @@
+volumes:
+  application-db-volume:
+    driver: local
+
+services:
+  application-db:
+    image: postgres:14.6
+    volumes:
+      - application-db-volume:/var/lib/postgresql/data
+    ports:
+      - "9200:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres

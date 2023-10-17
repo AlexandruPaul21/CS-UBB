@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      ddl-auto: update
+    open-in-view: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:9200/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
