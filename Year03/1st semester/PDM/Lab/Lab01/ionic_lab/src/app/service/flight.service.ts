@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Flight } from "../model/flight";
 import { Observable } from "rxjs";
+import { RxStompService } from "./stomp.service";
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,18 @@ export class FlightService {
 
   public findOne(id: number): Observable<Flight> {
     return this.http.get<Flight>(this.serverUrl + '/' + id);
+  }
+
+  public save(flight: Flight) {
+    return this.http.post(this.serverUrl, flight);
+  }
+
+  public update(id: number, flight: Flight) {
+    return this.http.put(this.serverUrl + '/' + id, flight);
+  }
+
+  public del(id: number) {
+    return this.http.delete(this.serverUrl + '/' + id);
   }
 
 }

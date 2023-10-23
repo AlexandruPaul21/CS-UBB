@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Flight } from "../model/flight";
 import { FlightService } from "../service/flight.service";
+import { RxStompService } from "../service/stomp.service";
 
 @Component({
   selector: 'app-details',
@@ -10,16 +11,24 @@ import { FlightService } from "../service/flight.service";
 })
 export class DetailsComponent  implements OnInit {
   public flight: Flight | null = null;
+  private readonly id: string | null;
 
-  constructor(private activeRoute: ActivatedRoute, private flightService: FlightService) {
-    const id = this.activeRoute.snapshot.paramMap.get('id');
-    if (id == null) return;
+  constructor(
+    private activeRoute: ActivatedRoute,
+    private flightService: FlightService,
+    private rxStompService: RxStompService
+    ) {
+    this.id = this.activeRoute.snapshot.paramMap.get('id');
 
-    this.flightService.findOne(Number(id)).subscribe((flight) => {
-      this.flight = flight;
-    });
+    this.rxStompService.watch('/topic/flights').subscribe(() => {
+      this.ngOnInit();
+    })
   }
 
-  ngOnInit() {}
-
+  public ngOnInit() {
+      if (this.id == null) return;
+      this.flightService.findOne(Number(this.id)).subscribe((flight) => {
+          this.flight = flight;
+      });
+  }
 }

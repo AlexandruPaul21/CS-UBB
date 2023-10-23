@@ -19,6 +19,6 @@
         <ion-label (click)="router.navigate(['/items/' + elem.id])">{{ elem.destination }}</ion-label>
       </ion-item>
     </ion-list>
-    <ion-button color="success">Add new flight</ion-button>
+    <ion-button color="success" routerLink="/items/new">Add new flight</ion-button>
   </ion-content>
 </ion-content>

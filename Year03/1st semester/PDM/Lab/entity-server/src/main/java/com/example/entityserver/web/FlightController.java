@@ -1,6 +1,7 @@
 package com.example.entityserver.web;
 
 import com.example.entityserver.model.dto.FlightDto;
+import com.example.entityserver.model.dto.WsEvent;
 import com.example.entityserver.service.FlightService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,9 +53,9 @@ public class FlightController {
         return ResponseEntity.ok(flightService.save(flight));
     }
 
-    @MessageMapping("/update")
+    @MessageMapping("/ws")
     @SendTo("/topic/flights")
-    public ResponseEntity<List<FlightDto>> updateFlightsWs() {
-        return ResponseEntity.ok(flightService.getAllFlights());
+    public WsEvent sendEvent(WsEvent event) {
+        return event;
     }
 }

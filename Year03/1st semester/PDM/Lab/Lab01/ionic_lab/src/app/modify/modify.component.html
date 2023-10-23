@@ -18,6 +18,6 @@
       <ion-datetime [(ngModel)]="flight.estimatedDeparture" [readonly]="isDeleteAction"></ion-datetime>
     </ion-item>
   </ion-list>
-  <ion-button *ngIf="!isDeleteAction">Update</ion-button>
-  <ion-button color="danger" *ngIf="isDeleteAction">Delete</ion-button>
+  <ion-button *ngIf="!isDeleteAction" (click)="updateFlight()" routerLink="/items">Update</ion-button>
+  <ion-button color="danger" *ngIf="isDeleteAction" (click)="deleteFlight()" routerLink="/items">Delete</ion-button>
 </div>

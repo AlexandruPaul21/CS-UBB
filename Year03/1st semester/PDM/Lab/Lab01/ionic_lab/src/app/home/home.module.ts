@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { DetailsComponent } from "../details/details.component";
 import { ModifyComponent } from "../modify/modify.component";
+import { NewFlightComponent } from "../new-flight/new-flight.component";
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { ModifyComponent } from "../modify/modify.component";
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, DetailsComponent, ModifyComponent]
+  declarations: [HomePage, DetailsComponent, ModifyComponent, NewFlightComponent]
 })
 export class HomePageModule {}
