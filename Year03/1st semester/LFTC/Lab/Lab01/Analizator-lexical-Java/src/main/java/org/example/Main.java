@@ -25,6 +25,8 @@ public class Main {
 
             String[] elements = line.split(" ");
 
+            boolean done = false;
+
             for (String element : elements) {
                 FipElement fipElement;
                 if (isConst(element)) {
@@ -37,9 +39,14 @@ public class Main {
                     fipElement = new FipElement(element, atoms.get("ID"), (pos == null) ? ts.addAtom(element) : pos);
                 } else {
                     System.out.println("An error occurred on line " + lineNumber);
-                    return;
+                    done = true;
+                    break;
                 }
                 fip.add(fipElement);
+            }
+
+            if (done) {
+                break;
             }
         }
 
