@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Flight } from "../model/flight";
 import { FlightService } from "../service/flight.service";
-import { RxStompService } from "../service/stomp.service";
+import { Network } from "@capacitor/network";
 
 @Component({
   selector: 'app-details',
@@ -12,23 +12,23 @@ import { RxStompService } from "../service/stomp.service";
 export class DetailsComponent  implements OnInit {
   public flight: Flight | null = null;
   private readonly id: string | null;
+  public networkStatus: boolean = true;
 
   constructor(
     private activeRoute: ActivatedRoute,
-    private flightService: FlightService,
-    private rxStompService: RxStompService
+    private flightService: FlightService
     ) {
     this.id = this.activeRoute.snapshot.paramMap.get('id');
-
-    this.rxStompService.watch('/topic/flights').subscribe(() => {
-      this.ngOnInit();
-    })
+    Network.addListener('networkStatusChange', status => {
+      this.networkStatus = status.connected;
+    });
   }
 
-  public ngOnInit() {
-      if (this.id == null) return;
-      this.flightService.findOne(Number(this.id)).subscribe((flight) => {
-          this.flight = flight;
-      });
+  public async ngOnInit() {
+    this.networkStatus = (await Network.getStatus()).connected;
+    if (this.id == null) return;
+    (await this.flightService.findAll()).subscribe((flights) => {
+      this.flight = flights.find((flight) => this.id === String(flight._id))!!;
+    });
   }
 }

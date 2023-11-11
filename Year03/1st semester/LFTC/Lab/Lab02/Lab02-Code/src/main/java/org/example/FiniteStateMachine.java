@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class FiniteStateMachine {
     private Set<String> states;
@@ -56,7 +55,37 @@ public class FiniteStateMachine {
     }
 
     public String checkOffset(String sequence) {
-        return matchExpression(sequence);
+        String result = "";
+        StringBuilder temporary = new StringBuilder();
+
+        String actualState = initialState;
+        for (int index = 0; index < sequence.length(); ++index) {
+            String finalActualState = actualState;
+            List<Transition> validTransitions = transitions.stream().filter(transition -> transition.getInitialState().equals(finalActualState)).toList();
+
+            int finalIndex = index;
+            List<Transition> validTransition = validTransitions.stream().filter(transition -> Objects.equals(transition.getValue(), String.valueOf(sequence.charAt(finalIndex)))).toList();
+
+            if (validTransition.size() != 1) {
+                return result;
+            }
+            temporary.append(sequence.charAt(index));
+
+            actualState = validTransition.get(0).getFinalState();
+
+            String finalActualState1 = actualState;
+            if (finalStates.stream().anyMatch(state -> state.equals(finalActualState1))) {
+                result = temporary.toString();
+            }
+        }
+
+        return result;
+    }
+
+    public boolean isNotDeterminist() {
+        return transitions.stream().anyMatch(transition -> transitions.stream().anyMatch(transition1 -> transition1.getInitialState().equals(transition.getInitialState()) &&
+               transition1.getValue().equals(transition.getValue()) &&
+               !transition1.getFinalState().equals(transition.getFinalState())));
     }
 
     public Set<String> getStates() {

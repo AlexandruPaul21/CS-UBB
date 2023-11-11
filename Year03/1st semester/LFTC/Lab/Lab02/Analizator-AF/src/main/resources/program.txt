@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+struct point {
+    int a;
+    int b;
+};
+
+int main() {
+    int a,b,c,d;
+    a= 2.4;
+    cin>>b>>d;
+    c=d*5;
+    c=a/b;
+    cout<<c;
+    return 0;
+}

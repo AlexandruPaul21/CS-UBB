@@ -7,21 +7,16 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RxStompService } from "./service/stomp.service";
-import { rxStompServiceFactory } from "./config/rx-stomp-factory";
+import { IonicStorageModule } from "@ionic/storage-angular";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, IonicStorageModule.forRoot()],
   providers: [
     {
       provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy
-    },
-    {
-      provide: RxStompService,
-      useFactory: rxStompServiceFactory,
-    },
+    }
   ],
   bootstrap: [AppComponent],
 })

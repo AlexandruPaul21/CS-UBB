@@ -1,4 +1,6 @@
 <div style="width: 90%; height: 90%; margin: 30px">
+  <ion-chip color="success" *ngIf="networkStatus">Online</ion-chip>
+  <ion-chip color="danger" *ngIf="!networkStatus">Offline</ion-chip>
   <ion-list>
     <ion-item>
       <ion-input label="Destination" [(ngModel)]="flight.destination" [readonly]="isDeleteAction"></ion-input>

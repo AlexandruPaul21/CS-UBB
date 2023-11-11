@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Flight } from "../model/flight";
 import { Observable } from "rxjs";
-import { RxStompService } from "./stomp.service";
+import { Storage } from "@ionic/storage-angular";
 
 @Injectable({
   providedIn: 'root'
@@ -10,28 +10,38 @@ import { RxStompService } from "./stomp.service";
 export class FlightService {
   private readonly serverUrl: string;
 
-  constructor(private http: HttpClient) {
-    this.serverUrl = "http://localhost:8080/api/flights";
+  constructor(private http: HttpClient, private storage: Storage) {
+    this.serverUrl = "http://localhost:3000/api/item";
   }
 
-  public findAll() : Observable<Flight[]> {
-    return this.http.get<Flight[]>(this.serverUrl);
+  public async findAll(): Promise<Observable<Flight[]>> {
+    const token = await this.storage.get('token');
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + token);
+    return this.http.get<Flight[]>(this.serverUrl, { headers: headers });
   }
 
-  public findOne(id: number): Observable<Flight> {
-    return this.http.get<Flight>(this.serverUrl + '/' + id);
+  public async findOne(id: number): Promise<Observable<Flight>> {
+    const token = await this.storage.get('token');
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + token);
+    return this.http.get<Flight>(this.serverUrl + '/' + id, { headers: headers });
   }
 
-  public save(flight: Flight) {
-    return this.http.post(this.serverUrl, flight);
+  public async save(flight: Flight) {
+    const token = await this.storage.get('token');
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + token);
+    return this.http.post(this.serverUrl, flight, { headers: headers });
   }
 
-  public update(id: number, flight: Flight) {
-    return this.http.put(this.serverUrl + '/' + id, flight);
+  public async update(id: number, flight: Flight) {
+    const token = await this.storage.get('token');
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + token);
+    return this.http.put(this.serverUrl + '/' + id, flight, { headers: headers });
   }
 
-  public del(id: number) {
-    return this.http.delete(this.serverUrl + '/' + id);
+  public async del(id: number) {
+    const token = await this.storage.get('token');
+    const headers = new HttpHeaders().set("Authorization", "Bearer " + token);
+    return this.http.delete(this.serverUrl + '/' + id, { headers: headers });
   }
 
 }

@@ -90,7 +90,7 @@ public class Main {
 
         String command = scanner.nextLine();
         switch (command) {
-            case "1" -> readFile("input.txt");
+            case "1" -> readFile("src/main/resources/input.txt");
             case "2" -> readConsole();
             case "3" -> {
                 System.out.println("Goodbye!");
@@ -121,6 +121,11 @@ public class Main {
                 case "3" -> af.getTransitions().forEach(System.out::println);
                 case "4" -> af.getFinalStates().forEach(System.out::println);
                 case "5" -> {
+                    if (af.isNotDeterminist()) {
+                        System.out.println("The FSM is not determinist. This option is not available!");
+                        break;
+                    }
+
                     System.out.println("Introduce the sequence: ");
                     String sequence = scanner.nextLine();
                     if (af.checkCompliance(sequence)) {
@@ -130,6 +135,11 @@ public class Main {
                     }
                 }
                 case "6" -> {
+                    if (af.isNotDeterminist()) {
+                        System.out.println("The FSM is not determinist. This option is not available!");
+                        break;
+                    }
+
                     System.out.println("Introduce the sequence: ");
                     String sequence = scanner.nextLine();
                     String result = af.checkOffset(sequence);

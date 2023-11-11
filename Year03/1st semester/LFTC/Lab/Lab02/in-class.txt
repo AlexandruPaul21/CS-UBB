@@ -1,0 +1,13 @@
+AutomatFinit:
+
+	multimeStari: Set<String>
+	alfabetIntrare: Set<String>
+	transitions: List<Transitions>
+	stareInitiala: String,
+	stariFinale: Set<String>
+	
+Transition:
+
+	stareInitiala: String,
+	stareFinala: String,
+	valoare: String
