@@ -1,0 +1,2 @@
+C:\Users\asirbu\repo\personal\CS-UBB\Year03\1st semester\PPD\In class\Sample\MPI_first\x64\Debug\MPI_first.exe
+C:\Users\asirbu\repo\personal\CS-UBB\Year03\1st semester\PPD\In class\Lab03\MPI_first\x64\Debug\MPI_first.exe

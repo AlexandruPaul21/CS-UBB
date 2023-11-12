@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Flights
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Flights</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content color="light">
+    <ion-list lines="inset">
+      <ion-item *ngFor="let elem of flights">
+        <ion-label (click)="router.navigate(['/items/' + elem.id])">{{ elem.destination }}</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-button color="success" routerLink="/items/new">Add new flight</ion-button>
+  </ion-content>
+</ion-content>
