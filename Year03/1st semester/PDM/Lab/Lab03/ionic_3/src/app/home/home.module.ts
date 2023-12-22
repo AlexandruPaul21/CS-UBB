@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
@@ -8,16 +8,16 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { DetailsComponent } from "../details/details.component";
 import { ModifyComponent } from "../modify/modify.component";
 import { NewFlightComponent } from "../new-flight/new-flight.component";
-import { PhotoComponent } from "../photo/photo.component";
 
 
 @NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, DetailsComponent, ModifyComponent, NewFlightComponent, PhotoComponent]
+  declarations: [HomePage, DetailsComponent, ModifyComponent, NewFlightComponent]
 })
 export class HomePageModule {}

@@ -101,9 +101,6 @@ int main(int argc, char** argv) {
             }
         }
 
-        auto calcEnd = high_resolution_clock::now();
-        cout << "T2: " << duration_cast<milliseconds>(calcEnd - calcStart).count() << endl;
-
         ofstream fout("output.txt");
 
         for (int k = 1; k < world_size; ++k) {
@@ -115,6 +112,8 @@ int main(int argc, char** argv) {
                 fout << endl;
             }
         }
+        auto calcEnd = high_resolution_clock::now();
+        cout << "T2: " << duration_cast<milliseconds>(calcEnd - calcStart).count() << endl;
         fout.close();
         auto end = high_resolution_clock::now();
         cout << "T1: " << duration_cast<milliseconds>(end - start).count() << endl;        

@@ -1,14 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Camera, CameraResultType, CameraSource, Photo } from "@capacitor/camera";
 import { Directory, Filesystem } from "@capacitor/filesystem";
+import { Preferences } from "@capacitor/preferences";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PhotoService {
   public photos: UserPhoto[] = [];
+  private PHOTOS_KEY = 'photos';
 
-  constructor() { }
+  constructor() {
+  }
+
+  public async loadPhotos() {
+    const savedPhotosPref = await Preferences.get({ key: this.PHOTOS_KEY }).then(result => result.value);
+    if (savedPhotosPref == null) return;
+    const savedPhotos = (savedPhotosPref ? JSON.parse(savedPhotosPref) : []) as UserPhoto[];
+
+    for (let photo of savedPhotos) {
+      const data = await this.readPicture(photo.filepath);
+      photo.webviewPath = `data:image/jpeg;base64,${data}`;
+    }
+    this.photos = savedPhotos;
+  }
 
   public async takeNewPhoto() {
     const capturedPhoto = await Camera.getPhoto({
@@ -17,36 +32,58 @@ export class PhotoService {
       quality: 100,
     });
 
-    //this.photos.unshift(await this.savePicture(capturedPhoto));
+    const photo = await this.savePicture(capturedPhoto) as UserPhoto;
 
-    return capturedPhoto;
+    this.photos.unshift(photo);
+
+    await Preferences.set({ key: this.PHOTOS_KEY, value: JSON.stringify(this.photos) });
+
+    return photo;
   }
 
   public async getNewPhoto() {
     const capturedPhoto = await Camera.getPhoto({
-      resultType: CameraResultType.Uri,
+      resultType: CameraResultType.Base64,
       source: CameraSource.Photos,
       quality: 100
     });
 
-    this.photos.unshift(await this.savePicture(capturedPhoto));
+    const photo = await this.savePicture(capturedPhoto) as UserPhoto;
 
-    return capturedPhoto;
+    this.photos.unshift(photo);
+
+    await Preferences.set({ key: this.PHOTOS_KEY, value: JSON.stringify(this.photos) });
+
+    return photo;
+  }
+
+
+
+  private async readPicture(path: string) {
+    return Filesystem.readFile({
+      path,
+      directory: Directory.Data
+    }).then(result => {
+        return result.data;
+      }
+    )
   }
 
   private async savePicture(photo: Photo) {
-    const base64Data = await this.readAsBase64(photo);
+    const base64Data = photo.base64String;
 
     const fileName = Date.now() + '.jpeg';
     await Filesystem.writeFile({
       path: fileName,
-      data: base64Data,
+      data: base64Data!!,
       directory: Directory.Data
     });
 
+    const webviewPath = `data:image/jpeg;base64,${ base64Data }`
+
     return {
       filepath: fileName,
-      webviewPath: photo.webPath
+      webviewPath: webviewPath
     };
   }
 

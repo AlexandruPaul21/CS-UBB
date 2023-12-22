@@ -10,6 +10,8 @@ struct point {
 int main() {
     int a,b,c,d;
     a= 2.4;
+    b =0b1001;
+    c == 0x1f52;
     cin>>b>>d;
     c=d*5;
     c=a/b;

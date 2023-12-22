@@ -4,4 +4,7 @@ export class Flight {
   destination: string | undefined;
   estimatedDeparture: Date | undefined;
   canceled: boolean = false;
+  photoName: string = '';
+  latitude: number;
+  longitude: number;
 }

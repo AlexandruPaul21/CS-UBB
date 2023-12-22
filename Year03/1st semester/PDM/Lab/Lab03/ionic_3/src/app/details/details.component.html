@@ -1,4 +1,5 @@
-<ion-card>
+<div style="display: flex; flex-direction: column; margin: 20px">
+<ion-card (mouseover)="overCardCallback()" (mouseleave)="animation.stop()">
   <ion-card-header>
     <ion-card-subtitle *ngIf="flight?.canceled">
       <div style="color: red">Cancelled</div>
@@ -15,3 +16,5 @@
     </div>
   </ion-card-content>
 </ion-card>
+<capacitor-google-map #map style="width: 500px; height: 500px"></capacitor-google-map>
+</div>

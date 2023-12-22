@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { PhotoComponent } from "./photo/photo.component";
 
 const routes: Routes = [
   {

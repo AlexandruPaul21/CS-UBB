@@ -17,6 +17,18 @@
     <ion-item>
       <ion-datetime [(ngModel)]="flight.estimatedDeparture" [readonly]="isDeleteAction"></ion-datetime>
     </ion-item>
+    <ion-item>
+      <ion-img [src]="photo.webviewPath" style="width: 100px; height: 100px"></ion-img>
+      <ion-input [disabled]="true" label="Plane photo" [value]="flight.photoName"></ion-input>
+      <ion-button (click)="takePhoto()" color="success">Take new photo</ion-button>
+      <ion-button (click)="getPhoto()" color="warning">Select from files</ion-button>
+    </ion-item>
+    <ion-item>
+      Location:
+      <capacitor-google-map #mapModify style="width: 500px; height: 500px"></capacitor-google-map>
+      Latitude: {{flight.latitude}}
+      Longitude: {{flight.longitude}}
+    </ion-item>
   </ion-list>
   <ion-button *ngIf="!isDeleteAction" (click)="updateFlight()" routerLink="/items">Update</ion-button>
   <ion-button color="danger" *ngIf="isDeleteAction" (click)="deleteFlight()" routerLink="/items">Delete</ion-button>

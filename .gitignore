@@ -1,84 +1,102 @@
-.DS_Store
-Others
-Confidential
-out
+# Compiled files
+*.class
+*.dll
+*.exe
+*.o
+*.so
 
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
+# Compiled Java bytecode
+*.class
 
-# AWS User-specific
-.idea/**/aws.xml
+# Compiled C++ files
+*.out
+*.app
+*.exe
 
-# Generated files
-.idea/**/contentModel.xml
+# Compiled C# files
+*.dll
+*.exe
 
-# Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
-
-# Gradle
-.idea/**/gradle.xml
-.idea/**/libraries
-
-# Gradle and Maven with auto-import
-# When using Gradle or Maven with auto-import, you should exclude module files,
-# since they will be recreated, and may cause churn.  Uncomment if using
-# auto-import.
-# .idea/artifacts
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-.idea/modules.xml
-.idea/*.iml
-# .idea/modules
-# *.iml
-# *.ipr
-
-# CMake
-cmake-build-*/
-
-# Mongo Explorer plugin
-.idea/**/mongoSettings.xml
-
-# File-based project format
-*.iws
+# Android
+build/
+local.properties
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/gradle.xml
+/.idea/dictionaries
+/.idea/libraries
 
 # IntelliJ
-out/
+.idea/
 
-obj/
+# Visual Studio
+.vscode/
+*.suo
+*.ntvs*
+*.nupkg
+*.pfx
+*.snk
+*.user
+*.userosscache
+*.sln.docstates
+
+# DataSpell
+/__pycache__/
+/.data/
+
+# DataGrip
+/.ideaData/
+*.sqlite
+
+# JetBrains IDEs
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.metadata/
 bin/
-node_modules/
-build/
-.vs/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
-# mpeltonen/sbt-idea plugin
-.idea_modules/
+# NetBeans
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# JIRA plugin
-atlassian-ide-plugin.xml
+# Kotlin
+*.kotlin_module
 
-# Cursive Clojure plugin
-.idea/replstate.xml
+# Gradle
+.gradle/
+/build/
 
-# SonarLint plugin
-.idea/sonarlint/
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
 
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-# Editor-based Rest Client
-.idea/httpRequests
-
-# Android studio 3.1+ serialized cache file
-.idea/caches/build_file_checksums.ser
+# Virtual Environment
+venv/
+env/
+*.env

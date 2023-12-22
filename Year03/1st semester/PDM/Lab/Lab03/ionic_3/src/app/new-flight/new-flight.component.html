@@ -17,18 +17,21 @@
       <ion-datetime [(ngModel)]="flight.estimatedDeparture"></ion-datetime>
     </ion-item>
     <ion-item>
-      <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-        <ion-fab-button (click)="takePhoto()">
-          <ion-icon name="camera"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
+      <ion-img [src]="photo?.webviewPath" style="width: 100px; height: 100px"></ion-img>
+      <ion-input [disabled]="true" label="Plane photo"></ion-input>
+      <ion-button (click)="takePhoto()" color="success">Take new photo</ion-button>
+      <ion-button (click)="getPhoto()" color="warning">Select from files</ion-button>
+    </ion-item>
+    <ion-item>
+      Location:
+      <capacitor-google-map #mapSelect style="width: 500px; height: 500px"></capacitor-google-map>
+      Latitude: {{flight.latitude}}
+      Longitude: {{flight.longitude}}
     </ion-item>
   </ion-list>
   <ion-button (click)="saveFlight()" routerLink="/items">Save</ion-button>
 
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)="takePhoto()">
-      <ion-icon [icon]="camera"></ion-icon>
-    </ion-fab-button>
+
   </ion-fab>
 </div>
