@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/ProjectWebInterface.iml" filepath="$PROJECT_DIR$/ProjectWebInterface.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/mpp-proiect-java-AlexandruPaul21.iml" filepath="$PROJECT_DIR$/.idea/mpp-proiect-java-AlexandruPaul21.iml" />
-    </modules>
-  </component>
-</project>

@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="postgresql-42.5.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../Altele/postgresql-42.5.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

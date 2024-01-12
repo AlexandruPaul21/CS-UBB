@@ -81,6 +81,10 @@ local.properties
 .gradle/
 /build/
 
+# Node
+/node_modules/
+node_modules
+
 # Maven
 target/
 pom.xml.tag

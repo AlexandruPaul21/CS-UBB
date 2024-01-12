@@ -1,0 +1,19 @@
+<ion-card>
+  <ion-card-header>
+    <ion-chip color="success" *ngIf="networkStatus">Online</ion-chip>
+    <ion-chip color="danger" *ngIf="!networkStatus">Offline</ion-chip>
+    <ion-card-subtitle *ngIf="flight?.canceled">
+      <div style="color: red">Cancelled</div>
+    </ion-card-subtitle>
+    <ion-card-title>{{ flight?.destination }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="button">
+      <div style="display: flex; align-items: center">The flight will be made with a plane model {{ flight?.plane }} on {{ flight?.estimatedDeparture }}</div>
+      <div>
+        <ion-button href="/items/{{ flight?._id }}/edit">Edit</ion-button>
+        <ion-button href="/items/{{ flight?._id }}/delete" color="danger">Delete</ion-button>
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card>

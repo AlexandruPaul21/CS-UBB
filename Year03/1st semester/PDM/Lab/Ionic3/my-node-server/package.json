@@ -1,0 +1,21 @@
+{
+  "name": "backpack-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src"
+  },
+  "keywords": [],
+  "author": "ilazar",
+  "license": "",
+  "dependencies": {
+    "koa": "^2.8.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-convert": "^1.2.0",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^7.4.0",
+    "nodemon": "^3.0.1",
+    "ws": "^7.1.2"
+  }
+}
