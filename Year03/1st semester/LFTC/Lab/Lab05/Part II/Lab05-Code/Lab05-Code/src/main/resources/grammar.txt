@@ -1,0 +1,15 @@
+PROGRAM : int main lparen rparen BLOCK
+TYPE : int | float
+BLOCK : lbrace INSTRLIST rbrace
+INSTRLIST : INSTR INSTRLIST | INSTR
+INSTR : ASSIGN | DECL | RETURN | IOINSTR | LOOP | IFSTMT | semicolon
+ASSIGN : id assign EXPR semicolon
+DECL : TYPE id semicolon
+RETURN : return EXPR semicolon
+IOINSTR : cin id semicolon | cout EXPR semicolon
+OP : add | substract | multiply | divide | modulo
+EXPR : id | const | const OP EXPR | id OP EXPR
+LOOP : while lparen COND rparen BLOCK
+COND : EXPR RELATIONOP EXPR
+RELATIONOP : eq | lt | gt
+IFSTMT : if lparen COND rparen BLOCK else BLOCK

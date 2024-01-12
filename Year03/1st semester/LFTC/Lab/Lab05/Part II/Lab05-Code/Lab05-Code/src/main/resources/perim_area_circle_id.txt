@@ -1,0 +1,4 @@
+radius 0
+perim 1
+area 3
+pi 2

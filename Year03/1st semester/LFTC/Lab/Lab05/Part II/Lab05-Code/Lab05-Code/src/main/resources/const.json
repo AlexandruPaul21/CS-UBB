@@ -1,0 +1,38 @@
+{
+  "states": ["q0", "q1", "q2", "q3"],
+  "initial_state": "q0",
+  "final_states": ["q1", "q2", "q3"],
+  "alphabet": "1234567890.",
+  "transitions": [
+    {
+      "from": "q0",
+      "to": "q1",
+      "letters": "123456789"
+    },
+    {
+      "from": "q1",
+      "to": "q1",
+      "letters": "1234567890"
+    },
+    {
+      "from": "q1",
+      "to": "q2",
+      "letters": "."
+    },
+    {
+      "from": "q2",
+      "to": "q2",
+      "letters": "1234567890"
+    },
+    {
+      "from": "q0",
+      "to": "q3",
+      "letters": "0"
+    },
+    {
+      "from": "q3",
+      "to": "q2",
+      "letters": "."
+    }
+  ]
+}

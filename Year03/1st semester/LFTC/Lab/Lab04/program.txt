@@ -1,0 +1,22 @@
+#include<iostream>
+
+using namespace std;
+
+struct point {
+    int a;
+    int b;
+};
+
+int main() {
+	int a,b,c,d;
+	234 = 123;
+	c =0b1101;
+	d= 0xa12f;
+	g = 02113;
+    cin>>b>>d;
+    c=d*5;
+    c=a/b;
+    cout<<c;
+    return 0;
+}
+

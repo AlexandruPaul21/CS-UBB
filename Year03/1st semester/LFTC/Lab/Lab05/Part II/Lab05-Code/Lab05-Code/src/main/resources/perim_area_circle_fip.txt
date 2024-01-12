@@ -1,0 +1,1 @@
+int main lparen rparen lbrace float id semicolon float id semicolon float id semicolon float id semicolon id assign const semicolon cin id semicolon id assign const multiply id multiply id semicolon id assign id multiply id multiply id semicolon cout id semicolon cout id semicolon return const semicolon rbrace 

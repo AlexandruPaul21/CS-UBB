@@ -1,0 +1,265 @@
+{
+  "states": ["q0", "q1"],
+  "initial_state": "q0",
+  "final_states": ["q3", "q4", "q9", "q13", "q14", "q15", "q16", "q17", "q18",
+    "q19", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q33", "q37", "q42", "q45", "q49", "q50", "q51", "q52"
+  ],
+  "alphabet": "intfloatmain(){}return;+-*/%<>=!ifelsewhilecincout",
+  "transitions": [
+    {
+      "from": "q0",
+      "to": "q1",
+      "letters": "i"
+    },
+    {
+      "from": "q1",
+      "to": "q2",
+      "letters": "n"
+    },
+    {
+      "from": "q2",
+      "to": "q3",
+      "letters": "t"
+    },
+    {
+      "from": "q1",
+      "to": "q4",
+      "letters": "f"
+    },
+    {
+      "from": "q0",
+      "to": "q5",
+      "letters": "f"
+    },
+    {
+      "from": "q5",
+      "to": "q6",
+      "letters": "l"
+    },
+    {
+      "from": "q6",
+      "to": "q7",
+      "letters": "o"
+    },
+    {
+      "from": "q7",
+      "to": "q8",
+      "letters": "a"
+    },
+    {
+      "from": "q8",
+      "to": "q9",
+      "letters": "t"
+    },
+    {
+      "from": "q0",
+      "to": "q10",
+      "letters": "m"
+    },
+    {
+      "from": "q10",
+      "to": "q11",
+      "letters": "a"
+    },
+    {
+      "from": "q11",
+      "to": "q12",
+      "letters": "i"
+    },
+    {
+      "from": "q12",
+      "to": "q13",
+      "letters": "n"
+    },
+    {
+      "from": "q0",
+      "to": "q14",
+      "letters": "("
+    },
+    {
+      "from": "q0",
+      "to": "q15",
+      "letters": ")"
+    },
+    {
+      "from": "q0",
+      "to": "q16",
+      "letters": "{"
+    },
+    {
+      "from": "q0",
+      "to": "q17",
+      "letters": "}"
+    },
+    {
+      "from": "q0",
+      "to": "q18",
+      "letters": ";"
+    },
+    {
+      "from": "q0",
+      "to": "q19",
+      "letters": "+"
+    },
+    {
+      "from": "q0",
+      "to": "q20",
+      "letters": "-"
+    },
+    {
+      "from": "q0",
+      "to": "q21",
+      "letters": "/"
+    },
+    {
+      "from": "q0",
+      "to": "q22",
+      "letters": "%"
+    },
+    {
+      "from": "q0",
+      "to": "q23",
+      "letters": "*"
+    },
+    {
+      "from": "q0",
+      "to": "q24",
+      "letters": "<"
+    },
+    {
+      "from": "q0",
+      "to": "q25",
+      "letters": ">"
+    },
+    {
+      "from": "q0",
+      "to": "q26",
+      "letters": "="
+    },
+    {
+      "from": "q0",
+      "to": "q27",
+      "letters": "!"
+    },
+    {
+      "from": "q0",
+      "to": "q28",
+      "letters": "r"
+    },
+    {
+      "from": "q28",
+      "to": "q29",
+      "letters": "e"
+    },
+    {
+      "from": "q29",
+      "to": "q30",
+      "letters": "t"
+    },
+    {
+      "from": "q30",
+      "to": "q31",
+      "letters": "u"
+    },
+    {
+      "from": "q31",
+      "to": "q32",
+      "letters": "r"
+    },
+    {
+      "from": "q32",
+      "to": "q33",
+      "letters": "n"
+    },
+    {
+      "from": "q0",
+      "to": "q34",
+      "letters": "e"
+    },
+    {
+      "from": "q34",
+      "to": "q35",
+      "letters": "l"
+    },
+    {
+      "from": "q35",
+      "to": "q36",
+      "letters": "s"
+    },
+    {
+      "from": "q36",
+      "to": "q37",
+      "letters": "e"
+    },
+    {
+      "from": "q0",
+      "to": "q38",
+      "letters": "w"
+    },
+    {
+      "from": "q38",
+      "to": "q39",
+      "letters": "h"
+    },
+    {
+      "from": "q39",
+      "to": "q40",
+      "letters": "i"
+    },
+    {
+      "from": "q40",
+      "to": "q41",
+      "letters": "l"
+    },
+    {
+      "from": "q41",
+      "to": "q42",
+      "letters": "e"
+    },
+    {
+      "from": "q0",
+      "to": "q43",
+      "letters": "c"
+    },
+    {
+      "from": "q43",
+      "to": "q44",
+      "letters": "i"
+    },
+    {
+      "from": "q44",
+      "to": "q45",
+      "letters": "n"
+    },
+    {
+      "from": "q43",
+      "to": "q46",
+      "letters": "o"
+    },
+    {
+      "from": "q46",
+      "to": "q47",
+      "letters": "u"
+    },
+    {
+      "from": "q47",
+      "to": "q49",
+      "letters": "t"
+    },
+    {
+      "from": "q26",
+      "to": "q50",
+      "letters": "="
+    },
+    {
+      "from": "q24",
+      "to": "q51",
+      "letters": "="
+    },
+    {
+      "from": "q25",
+      "to": "q52",
+      "letters": "="
+    }
+  ]
+}
