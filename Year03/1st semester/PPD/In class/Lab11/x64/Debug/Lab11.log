@@ -1,0 +1,3 @@
+﻿  Lab11.cpp
+C:\Users\asirbu\repo\personal\CS-UBB\Year03\1st semester\PPD\In class\Lab11\Lab11.cpp(97,13): warning C4849: OpenMP 'collapse' clause ignored in 'for' directive
+  Lab11.vcxproj -> C:\Users\asirbu\repo\personal\CS-UBB\Year03\1st semester\PPD\In class\Lab11\x64\Debug\Lab11.exe
