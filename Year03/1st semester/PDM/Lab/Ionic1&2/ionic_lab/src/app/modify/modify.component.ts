@@ -3,7 +3,6 @@ import { Flight } from "../model/flight";
 import { ActivatedRoute } from "@angular/router";
 import { FlightService } from "../service/flight.service";
 import { Subscription } from "rxjs";
-import { RxStompService } from "../service/stomp.service";
 import { Network } from "@capacitor/network";
 import { Operation } from "../model/entities-with-operations";
 import { Storage } from "@ionic/storage-angular";

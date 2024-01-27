@@ -66,7 +66,7 @@ export class ModifyComponent implements OnInit, OnDestroy {
       this.newMap = await GoogleMap.create({
         id: 'my-map',
         element: this.mapRef.nativeElement,
-        apiKey: 'your key here',
+        apiKey: 'AIzaSyCdUoBAAWexRUuH2rorUAFqYjQhUTlir80',
         config: {
           center: { lat, lng },
           zoom: 8,

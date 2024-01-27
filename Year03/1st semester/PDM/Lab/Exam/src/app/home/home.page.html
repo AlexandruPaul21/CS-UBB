@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Inventory
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inventory</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-label *ngIf="totalPages == 0">Downloading....</ion-label>
+  <ion-label *ngIf="totalPages > 0">Downloading {{ (page - 1)+ '/' + totalPages}}</ion-label><br>
+  <ion-button [disabled]="downloading && !reloadReceived" (click)="onDownloadClick()">Download</ion-button>
+
+  <ion-input [debounce]="2000" (ionInput)="onInputChange($event.detail.value)"></ion-input>
+  <ion-content color="light">
+    <ion-list lines="inset">
+      <ion-item *ngFor="let elem of selectedProducts">
+        <ion-label
+          (click)="selectedProduct = elem"
+          style="display: flex; flex-direction: row; align-items: center">
+          {{ elem.name }}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-label>Product: {{ selectedProduct.name }}</ion-label><br>
+    <ion-input label="Quantity" [(ngModel)]="quantity"></ion-input>
+    <ion-button
+      [disabled]="quantity <= 0 || selectedProduct.code == null"
+      (click)="onAddPushed()"
+    >
+      Add
+    </ion-button>
+
+    <br><br>
+
+    <ion-label>Cart</ion-label><br>
+    <ion-list lines="inset">
+      <ion-item *ngFor="let elem of cart">
+        <ion-label
+          style="display: flex; flex-direction: row; align-items: center">
+          {{ elem.name + '; Q: ' + elem.item?.quantity + '; Status: ' + getStatusText(elem.submitted) }}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-button
+      [disabled]="!hasUnsentProducts(cart) || uploadRunning"
+      (click)="onUploadClicked()"
+    >
+      Upload
+    </ion-button>
+  </ion-content>
+
+
+</ion-content>

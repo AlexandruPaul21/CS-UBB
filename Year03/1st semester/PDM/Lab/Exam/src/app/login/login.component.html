@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-input label="Table" [(ngModel)]="data"
+      ></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-label>{{ label }}</ion-label><br>
+  <ion-button (click)="loginClicked()">
+    Login
+  </ion-button>
+</ion-content>

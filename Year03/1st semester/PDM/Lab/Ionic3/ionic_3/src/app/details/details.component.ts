@@ -51,7 +51,7 @@ export class DetailsComponent implements AfterViewInit, OnInit {
         this.newMap = await GoogleMap.create({
           id: 'my-map',
           element: this.mapRef.nativeElement,
-          apiKey: '',
+          apiKey: 'AIzaSyCdUoBAAWexRUuH2rorUAFqYjQhUTlir80',
           config: {
             center: { lat, lng },
             zoom: 8,
