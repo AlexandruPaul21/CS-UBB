@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>testspec Prj236 - sair3220_WBT</title>
+	<meta name="generator" content="LibreOffice 7.6.2.1 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2024-04-11T09:04:24.456000000"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin-left: 2cm; margin-right: 1cm; margin-top: 1cm; margin-bottom: 1cm }
+		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
+		h1 { margin-bottom: 0.21cm; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Serif", serif; font-size: 24pt; font-weight: bold }
+		h1.cjk { font-family: "NSimSun"; font-size: 24pt; font-weight: bold }
+		h1.ctl { font-family: "Lucida Sans"; font-size: 24pt; font-weight: bold }
+		td p { orphans: 0; widows: 0; background: transparent }
+		th p { font-weight: bold; text-align: center; orphans: 0; widows: 0; background: transparent }
+		a:link { color: #000080; text-decoration: underline }
+		a:visited { color: #800000; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-GB" link="#000080" vlink="#800000" dir="ltr"><p style="margin-bottom: 0cm">
+TestLink Community [configure
+$tlCfg-&gt;document_generator-&gt;company_name]</p>
+<p style="margin-bottom: 0cm">&nbsp;</p>
+<hr/>
+
+<p align="center"><img src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" name="Image1" alt="TestLink logo" align="bottom" width="76" height="38" border="0"/>
+</p>
+<p>Test Specification</p>
+<p align="left">Test Project: Prj236<br/>
+Test Suite: Prj236 -
+sair3220_WBT</p>
+<p><a name="printedby"></a>Printed by TestLink on 11/04/2024</p>
+<div id="copyright" dir="ltr"><p>2012 © TestLink Community</p>
+</div>
+<h1 class="western" style="page-break-before: always">Table Of
+Contents</h1>
+<p style="border: none; padding: 0cm"><a href="#toc_1"><b>1.sair3220_WBT</b></a></p>
+<p style="border: none; padding: 0cm"><a href="#toc_tc21798">P236-62:
+F02_incoming_IntervalIsNull_returnOne</a></p>
+<p style="border: none; padding: 0cm"><a href="#toc_tc21800">P236-63:
+F02_incoming_tasksIsEmpty_returnOne</a></p>
+<h1 class="western">Scope</h1>
+<p>Testing project for group 236</p>
+<p><a name="toc_1"></a><br/>
+<br/>
+
+</p>
+<h1 class="western">1.Test Suite : sair3220_WBT</h1>
+<p><a name="toc_tc21798"></a>&nbsp;</p>
+<table width="90%" cellpadding="2" cellspacing="2">
+	<tr>
+		<th colspan="4" style="border: none; padding: 0cm"><p>Test Case
+			P236-62: F02_incoming_IntervalIsNull_returnOne&nbsp;[Version : 1]</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Author:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>sair3220</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" style="border: none; padding: 0cm"><p style="margin-bottom: 0.5cm">
+			Summary:</p>
+			<p>Pass null for both dates =&gt; tasks list not being filtered</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Execution
+			type:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>Manual</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Estimated
+			exec. duration (min):</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Importance:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>Medium</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" style="border: none; padding: 0cm"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p>name of the autotest
+			class:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p>name of the test method:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Requirements</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>sair3220_F02:
+			Afisare task-uri [Version : 1]</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Keywords:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>&nbsp;None</p>
+		</td>
+	</tr>
+</table>
+<p><a name="toc_tc21800"></a>&nbsp;</p>
+<table width="90%" cellpadding="2" cellspacing="2">
+	<tr>
+		<th colspan="4" style="border: none; padding: 0cm"><p>Test Case
+			P236-63: F02_incoming_tasksIsEmpty_returnOne&nbsp;[Version : 1]</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Author:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>sair3220</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" style="border: none; padding: 0cm"><p style="margin-bottom: 0.5cm">
+			Summary:</p>
+			<p>If the list of tasks is empty =&gt; return DefaultTask with
+			title “Empty”</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Execution
+			type:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>Manual</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Estimated
+			exec. duration (min):</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Importance:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>Medium</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" style="border: none; padding: 0cm"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p>name of the autotest
+			class:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"></td>
+	</tr>
+	<tr>
+		<td style="border: none; padding: 0cm"><p>name of the test method:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"></td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Requirements</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>sair3220_F02:
+			Afisare task-uri [Version : 1]</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="20%" valign="top" style="border: none; padding: 0cm"><p>Keywords:</p>
+		</td>
+		<td colspan="3" style="border: none; padding: 0cm"><p>&nbsp;None</p>
+		</td>
+	</tr>
+</table>
+<p><br/>
+<br/>
+
+</p>
+</body>
+</html>

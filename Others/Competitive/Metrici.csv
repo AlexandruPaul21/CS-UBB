@@ -1,0 +1,108 @@
+MAP Lab8,Fri, 25 Nov 2022 16:11:02 EET
+Method,CogC,v(G)
+Main.main(String[]),0,1
+domain.Entity.getId(),0,1
+domain.Entity.setId(ID),0,1
+"domain.Friendship.Friendship(Long, Long)",0,1
+domain.Friendship.getFriendsFrom(),0,1
+domain.Friendship.getId1(),0,1
+domain.Friendship.getId2(),0,1
+domain.Friendship.setFriendsFrom(LocalDate),0,1
+domain.Friendship.setId1(Long),0,1
+domain.Friendship.setId2(Long),0,1
+domain.Friendship.toString(),0,1
+domain.Friendship.writeable(),0,1
+"domain.User.User(String, String, String, String)",0,1
+domain.User.equals(Object),3,6
+domain.User.getEmail(),0,1
+domain.User.getFirstname(),0,1
+domain.User.getLastname(),0,1
+domain.User.getPassword(),0,1
+domain.User.hashCode(),0,1
+domain.User.setEmail(String),0,1
+domain.User.setFirstname(String),0,1
+domain.User.setLastname(String),0,1
+domain.User.setPassword(String),0,1
+domain.User.toString(),0,1
+domain.User.writeable(),0,1
+domain.validators.ArgumentException.ArgumentException(),0,1
+domain.validators.ArgumentException.ArgumentException(String),0,1
+"domain.validators.ArgumentException.ArgumentException(String, Throwable)",0,1
+"domain.validators.ArgumentException.ArgumentException(String, Throwable, boolean, boolean)",0,1
+domain.validators.ArgumentException.ArgumentException(Throwable),0,1
+domain.validators.FriendshipValidator.validate(Friendship),1,2
+domain.validators.UserValidator.validate(User),3,4
+domain.validators.ValidationException.ValidationException(),0,1
+domain.validators.ValidationException.ValidationException(String),0,1
+"domain.validators.ValidationException.ValidationException(String, Throwable)",0,1
+"domain.validators.ValidationException.ValidationException(String, Throwable, boolean, boolean)",0,1
+domain.validators.ValidationException.ValidationException(Throwable),0,1
+"repository.db.DbFriendshipRepository.DbFriendshipRepository(Validator<Friendship>, String, String, String)",0,1
+"repository.db.DbFriendshipRepository.delete(Long, Long)",4,4
+repository.db.DbFriendshipRepository.loadData(),2,3
+repository.db.DbFriendshipRepository.save(Friendship),3,3
+"repository.db.DbUserRepository.DbUserRepository(Validator<User>, String, String, String)",0,1
+repository.db.DbUserRepository.delete(Long),3,3
+repository.db.DbUserRepository.loadData(),2,3
+repository.db.DbUserRepository.save(User),3,3
+repository.db.DbUserRepository.update(User),3,3
+"repository.file.FileFriendshipRepository.FileFriendshipRepository(Validator<Friendship>, String)",0,1
+repository.file.FileFriendshipRepository.delete(Long),0,1
+"repository.file.FileFriendshipRepository.delete(Long, Long)",0,1
+repository.file.FileFriendshipRepository.loadData(),2,3
+repository.file.FileFriendshipRepository.save(Friendship),0,1
+repository.file.FileFriendshipRepository.saveData(),5,5
+"repository.file.FileUserRepository.FileUserRepository(Validator<User>, String)",0,1
+repository.file.FileUserRepository.delete(Long),0,1
+repository.file.FileUserRepository.loadData(),2,3
+repository.file.FileUserRepository.save(User),0,1
+repository.file.FileUserRepository.saveData(),5,5
+repository.file.FileUserRepository.update(User),0,1
+repository.memory.MemoryFriendshipRepository.MemoryFriendshipRepository(Validator<Friendship>),0,1
+"repository.memory.MemoryFriendshipRepository.areFriends(Long, Long)",0,1
+"repository.memory.MemoryFriendshipRepository.delete(Long, Long)",4,4
+repository.memory.MemoryFriendshipRepository.getFriendships(Long),4,4
+repository.memory.MemoryFriendshipRepository.getLowestFreeId(),3,3
+repository.memory.MemoryRepository.MemoryRepository(Validator<E>),0,1
+repository.memory.MemoryRepository.delete(ID),2,3
+repository.memory.MemoryRepository.findAll(),0,1
+repository.memory.MemoryRepository.findOne(ID),2,3
+repository.memory.MemoryRepository.save(E),2,3
+repository.memory.MemoryRepository.update(E),2,3
+repository.memory.MemoryUserRepository.MemoryUserRepository(Validator<User>),0,1
+repository.memory.MemoryUserRepository.getLowestFreeId(),3,3
+service.FriendshipService.FriendshipService(DbFriendshipRepository),0,1
+"service.FriendshipService.addFriend(Long, Long)",3,4
+service.FriendshipService.findAll(),0,1
+service.FriendshipService.findOne(Long),0,1
+"service.FriendshipService.removeFriend(Long, Long)",3,4
+service.UserService.UserService(DbUserRepository),0,1
+"service.UserService.add(String, String, String, String)",1,2
+service.UserService.delete(Long),1,2
+service.UserService.findAll(),0,1
+service.UserService.findOne(Long),0,1
+"service.UserService.update(Long, String, String, String, String)",0,1
+"ui.Console.Console(UserService, FriendshipService)",0,1
+ui.Console.printMenu(),29,17
+
+Class,WMC
+Main,1
+domain.Entity,2
+domain.Friendship,9
+domain.User,15
+domain.validators.ArgumentException,5
+domain.validators.FriendshipValidator,2
+domain.validators.UserValidator,4
+domain.validators.ValidationException,5
+repository.db.DbFriendshipRepository,7
+repository.db.DbUserRepository,9
+repository.file.FileFriendshipRepository,9
+repository.file.FileUserRepository,9
+repository.memory.MemoryFriendshipRepository,12
+repository.memory.MemoryRepository,14
+repository.memory.MemoryUserRepository,4
+service.FriendshipService,9
+service.UserService,8
+ui.Console,12
+utils.Constants,0
+

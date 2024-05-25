@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tasks.controller.TaskInfoController">
+   <children>
+      <Label layoutX="227.0" layoutY="30.0" text="Task details">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTitle" layoutX="55.0" layoutY="75.0" prefHeight="27.0" prefWidth="444.0" text="Title:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelStart" layoutX="55.0" layoutY="115.0" prefHeight="27.0" prefWidth="293.0" text="Start time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEnd" layoutX="55.0" layoutY="155.0" prefHeight="27.0" prefWidth="293.0" text="End time">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelInterval" layoutX="55.0" layoutY="195.0" prefHeight="27.0" prefWidth="397.0" text="Interval">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelIsActive" layoutX="55.0" layoutY="235.0" prefHeight="27.0" prefWidth="210.0" text="Is active">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="226.0" layoutY="278.0" mnemonicParsing="false" onAction="#closeWindow" prefWidth="100.0" text="OK" />
+   </children>
+</AnchorPane>

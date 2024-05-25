@@ -1,0 +1,13 @@
+M7R0
+I#ppf*6$%"zG%"nG6"6$%)operatorG%&arrowGF'-%*piecewiseG6%1""!9$)F09%F/F'F'F'F',
+I,PeanoKernelw,6%'%"LG%*procedureG'%"dGI*nonnegintG6$%*protectedG%(_syslibG'%"t
+G%%nameG6#%"KG6"F'C$>8$*&-%*factorialG6#F2!""-%%evalG6#-F06#-I(unapplyG6$F=F>6$
+-F"6$,&%"xG"""9&FLF2FYFZOFG6#Q5Compute~Peano~KernelF'F'F'6#""$6%7&Q!F'FL"#7""'7
+&F]oFLFZ"#P7&F]oFLFZ""*F',
+I*PeanoCorrw,6$F6F9FB6"F'C%>FG-F06#f*6#FYF'6$F)F*F')F0,&T$FZFZFZF'F'6$F:F2>FG*(
+-FJ6#,&F2FZFZFZFL-I'factorG6$F=F>6#-I)simplifyG6$F=F>6#FGFZ--&I"DG6$F=F>6#-%"$G
+6$FZFgp6#%"fG6#%#xiGFZOFG6#Q1Peano~error~termF'F'F'6#""#6&7&F]oFL"#5F_o7&F]oFLF
+Z"#;7&F]oFLFZ"#\FboF',
+I0PeanoEstimationw,6&F6F9%"aG%"bG6$FCF@6"F'C$>FG-F36%F0F28%*&&%"MGFfpFZ-I$intG6
+$F=F>6$-%$absGF_q/Fds;Fen9'FZ6#Q1Peano~estimationF'F'F'6#""%6%7&F]oFLFfrF_o7&F]
+oFLFZ"#@7&F]oFLFZ"#DF'

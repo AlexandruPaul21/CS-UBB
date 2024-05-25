@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Prj236 - sair3220_BBT</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width= height= src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Prj236<br/>Test Suite: Prj236 - sair3220_BBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 28/03/2024</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.sair3220_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc20703">P236-26: ECP-Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc20707">P236-27: ECP-Invalid</a></p><p style="padding-left: 45px;"><a href="#toc_tc20711">P236-28: BVA-Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc20714">P236-29: BVA-Invalid</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Testing project for group 236</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : sair3220_BBT</h1>
+<div><p>Se testeaza F01</p>
+</div><a name="toc_tc20703"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P236-26: ECP-Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sair3220</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Adds a task in which the description match the required length interval</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Insert a task having this parameters in the constructor:</p>
+
+<p>description: sample</p>
+
+<p>start: 2023-12-2</p>
+
+<p>end: 2024-03-28</p>
+
+<p>repeat 1</p>
+
+<p>&nbsp;</p>
+</td><td><p>the entry is succesfully added</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">sair3220_F01:  Adaugarea unui task [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc20707"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P236-27: ECP-Invalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sair3220</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>The description is out of length interval bounds</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Add a task with following parameters:</p>
+
+<p>description:&nbsp;</p>
+
+<table border="1" cellspacing="0" style="width:63pt">
+	<tbody>
+		<tr>
+			<td style="height:14.4pt; vertical-align:bottom; white-space:nowrap; width:63pt">OHaeBAsLxokgKGTcTl7yKgZ7ysWJ0Ul7ezHeTM5hAW6HmgydGDKOpifQzZ4N4AKmTgtxrl9KhjUSsSsE0QWLVEhzOz4Sofkhme8ZTnm3Nv2QGHLju3kQ9TysjaX3og8uRl55h5SW7w1iXQonxp0XrXFkZ9gKGHhB3aNdo9foXYD43WGznwTvY2XiMfuSMef3GVm7YieRJejtGqte0VCzRGHV2WN1rHQ8DT6vxQMpnssK3e2YTS4aIAykOjHIYleUoBqLQH4J9RHFS6JuVKK2VBJE8RJtu1FFRvKYKQDpaJx2</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>start:&nbsp; 2023-04-12</p>
+
+<p>end: 2024-03-28</p>
+
+<p>repeat: 1</p>
+</td><td><p>an error is thrown, the description length exceeds the maximum allowed</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">sair3220_F01:  Adaugarea unui task [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc20711"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P236-28: BVA-Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sair3220</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Date is in the interval the lower extreme bound of [1970, 2024]</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Create a task with following properties:</p>
+
+<p>description: Sample</p>
+
+<p>start: 1970-01-01</p>
+
+<p>end: 2024-12-31</p>
+
+<p>repeat: 1</p>
+</td><td><p>the entry is succesfully created</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">sair3220_F01:  Adaugarea unui task [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc20714"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case P236-29: BVA-Invalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sair3220</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>The date is the a value lower than 1970-01-01</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Create a task with following attributes:</p>
+
+<p>description: Sample</p>
+
+<p>start: 1969-12-31</p>
+
+<p>end: 2024-02-12</p>
+
+<p>repeat: 1</p>
+</td><td><p>an error is thrown, the date is not in the accepted frame</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">sair3220_F01:  Adaugarea unui task [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>

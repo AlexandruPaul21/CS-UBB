@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tasks.controller.Controller">
+   <children>
+      <AnchorPane prefHeight="44.0" prefWidth="760.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <children>
+            <Button fx:id="btnNew" layoutY="6.0" mnemonicParsing="false" onAction="#showTaskDialog" prefWidth="90.0" text="New" AnchorPane.leftAnchor="0.0" />
+            <Button fx:id="btnEdit" layoutX="125.0" layoutY="6.0" mnemonicParsing="false" onAction="#showTaskDialog" prefWidth="90.0" text="Edit" AnchorPane.leftAnchor="120.0" />
+            <Button fx:id="btnDelete" layoutX="248.0" layoutY="6.0" mnemonicParsing="false" onAction="#deleteTask" prefWidth="90.0" text="Delete" AnchorPane.leftAnchor="240.0" />
+            <Button fx:id="btnMore" layoutX="670.0" layoutY="6.0" mnemonicParsing="false" onAction="#showDetailedInfo" prefWidth="90.0" text="More..." AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="232.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <children>
+            <TableView fx:id="tasks" prefHeight="232.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="columnTitle" prefWidth="348.0" text="Title" />
+                <TableColumn fx:id="columnTime" prefWidth="214.0" text="Time" />
+                  <TableColumn fx:id="columnRepeated" prefWidth="197.0" text="Repeated" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <VBox prefHeight="55.0" prefWidth="760.0">
+         <children>
+            <Label fx:id="labelCount" text="0 elements">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </VBox.margin>
+      </VBox>
+      <AnchorPane prefHeight="112.0" prefWidth="760.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <children>
+            <Label prefHeight="31.0" prefWidth="90.0" text="Tasks from:" />
+            <TextField fx:id="fieldTimeFrom" layoutX="308.0" promptText="HH:mm" />
+            <Label layoutX="52.0" layoutY="43.0" prefHeight="31.0" prefWidth="21.0" text="To" />
+            <TextField fx:id="fieldTimeTo" layoutX="308.0" layoutY="43.0" prefHeight="31.0" prefWidth="187.0" promptText="HH:mm" />
+            <Button fx:id="btnShow" layoutX="513.0" layoutY="43.0" mnemonicParsing="false" onAction="#showFilteredTasks" prefWidth="90.0" text="Show" />
+            <Button fx:id="btnReset" layoutX="670.0" layoutY="43.0" mnemonicParsing="false" onAction="#resetFilteredTasks" prefWidth="90.0" text="Reset" AnchorPane.rightAnchor="0.0" />
+            <DatePicker fx:id="datePickerFrom" layoutX="83.0" />
+            <DatePicker fx:id="datePickerTo" layoutX="83.0" layoutY="43.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

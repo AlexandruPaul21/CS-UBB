@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tasks.controller.NewEditController">
+   <children>
+      <AnchorPane prefHeight="144.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="fieldTitle" layoutX="93.0" layoutY="25.0" prefHeight="31.0" prefWidth="288.0" />
+            <Label layoutX="30.0" layoutY="30.0" text="Title" />
+            <Label layoutX="30.0" layoutY="85.0" text="Time" />
+            <DatePicker fx:id="datePickerStart" layoutX="93.0" layoutY="80.0" prefHeight="31.0" prefWidth="253.0" />
+            <CheckBox fx:id="checkBoxActive" layoutX="481.0" layoutY="30.0" mnemonicParsing="false" text="Active" />
+            <CheckBox fx:id="checkBoxRepeated" layoutX="481.0" layoutY="85.0" mnemonicParsing="false" onAction="#switchRepeatedCheckbox" text="Repeated" />
+            <TextField fx:id="txtFieldTimeStart" layoutX="346.0" layoutY="80.0" prefHeight="31.0" prefWidth="84.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="152.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="30.0" layoutY="25.0" text="End" />
+            <Label layoutX="30.0" layoutY="80.0" text="Interval" />
+            <DatePicker fx:id="datePickerEnd" disable="true" layoutX="94.0" layoutY="20.0" prefHeight="31.0" prefWidth="253.0" />
+            <TextField fx:id="fieldInterval" disable="true" layoutX="94.0" layoutY="75.0" prefHeight="31.0" prefWidth="288.0" promptText="HH:mm" />
+            <TextField fx:id="txtFieldTimeEnd" disable="true" layoutX="347.0" layoutY="20.0" prefHeight="31.0" prefWidth="84.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="134.0" prefWidth="600.0">
+         <children>
+            <Button defaultButton="true" layoutX="158.0" layoutY="32.0" mnemonicParsing="false" onAction="#saveChanges" prefWidth="100.0" text="Ok" />
+            <Button cancelButton="true" layoutX="323.0" layoutY="32.0" mnemonicParsing="false" onAction="#closeDialogWindow" prefWidth="100.0" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

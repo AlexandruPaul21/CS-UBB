@@ -1,0 +1,158 @@
+>> syms x
+>> T1=taylor(sin(x))
+ 
+T1 =
+ 
+x^5/120 - x^3/6 + x
+ 
+>> eval(subs(T1,pi/17))
+
+ans =
+
+   0.183749519276292
+
+>> sin(pi/17)
+
+ans =
+
+   0.183749517816570
+
+>> eval(subs(T1,pi/3))
+
+ans =
+
+   0.866295283786835
+
+>> sin(pi/3)
+
+ans =
+
+   0.866025403784439
+
+>> eval(subs(T1,pi/2))
+
+ans =
+
+   1.004524855534817
+
+>> fplot([sin(x),T1])
+>> T2=taylor(exp(x))
+ 
+T2 =
+ 
+x^5/120 + x^4/24 + x^3/6 + x^2/2 + x + 1
+ 
+>> fplot([exp(x),T2])
+>> T3=taylor(erf(x),x,'Order', 12)
+ 
+T3 =
+ 
+- x^11/(660*pi^(1/2)) + x^9/(108*pi^(1/2)) - x^7/(21*pi^(1/2)) + x^5/(5*pi^(1/2)) - (2*x^3)/(3*pi^(1/2)) + (2*x)/pi^(1/2)
+ 
+>> ct3=coeffs(T3)
+ 
+ct3 =
+ 
+[ 2, -2/3, 1/5, -1/21, 1/108, -1/660]
+ 
+>> roots(ct3)
+ 
+ans =
+ 
+                                          0.23329123777197608288483202190395
+ - 0.074761006503012413125927634800404 - 0.22794768820858013353055594831581i
+ - 0.074761006503012413125927634800404 + 0.22794768820858013353055594831581i
+    0.12478205428369103835017829051509 - 0.20212982427143255062729559762713i
+    0.12478205428369103835017829051509 + 0.20212982427143255062729559762713i
+ 
+>> T4=taylor(log(1+x),x,'order', 8)
+ 
+T4 =
+ 
+x^7/7 - x^6/6 + x^5/5 - x^4/4 + x^3/3 - x^2/2 + x
+ 
+>> eval(subs(T4,1))
+
+ans =
+
+   0.759523809523809
+
+>> log(2)
+
+ans =
+
+   0.693147180559945
+
+>> T4=taylor(log(1+x),x,'order', 500);
+>> eval(subs(T4,1))
+
+ans =
+
+   0.694148180557945
+
+>> T4=taylor(log(1+x),x,'order', 10000);
+>> eval(subs(T4,1))
+
+ans =
+
+   NaN
+
+>> T4=taylor(log(1+x),x,'order', 5000);
+>> eval(subs(T4,1))
+
+ans =
+
+   NaN
+
+>> T5=taylor(log((1+x)/1-x)),x,'order', 8);
+ T5=taylor(log((1+x)/1-x)),x,'order', 8);
+                                       ↑
+Error: Invalid expression. When calling a function or
+indexing a variable, use parentheses. Otherwise, check for
+mismatched delimiters.
+ 
+>> T5=taylor(log((1+x)/(1-x)),x,'order', 8);
+>> T5=taylor(log((1+x)/(1-x)),x,'order', 8)
+ 
+T5 =
+ 
+(2*x^7)/7 + (2*x^5)/5 + (2*x^3)/3 + 2*x
+ 
+>> eval(subs(T5,1/3))
+
+ans =
+
+   0.693134757332288
+
+>> log(2)
+
+ans =
+
+   0.693147180559945
+
+>> T5=taylor(log((1+x)/(1-x)),x,'order', 10)
+ 
+T5 =
+ 
+(2*x^9)/9 + (2*x^7)/7 + (2*x^5)/5 + (2*x^3)/3 + 2*x
+ 
+>> eval(subs(T5,1/3))
+
+ans =
+
+   0.693146047390827
+
+>> pade(exp(x),x,0,'order' [1,1])
+ pade(exp(x),x,0,'order' [1,1])
+                         ↑
+Error: Invalid expression. When calling a function or
+indexing a variable, use parentheses. Otherwise, check for
+mismatched delimiters.
+ 
+>> pade(exp(x),x,0,'order', [1,1])
+ 
+ans =
+ 
+-(x + 2)/(x - 2)
+ 
+>> 
