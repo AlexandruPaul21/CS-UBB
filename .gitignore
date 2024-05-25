@@ -5,6 +5,10 @@
 *.o
 *.so
 
+cmake-build-debug/
+.vs/
+obj/
+
 # Compiled Java bytecode
 *.class
 
@@ -104,3 +108,5 @@ __pycache__/
 venv/
 env/
 *.env
+
+.DS_Store
